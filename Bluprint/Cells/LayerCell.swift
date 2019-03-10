@@ -11,6 +11,7 @@ import UIKit
 class LayerCell: UICollectionViewCell {
 
     @IBOutlet weak var view: UIView!
+    @IBOutlet weak var layerLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -21,7 +21,26 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mHL-cG-q9N">
                         <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g6z-J7-egu">
+                                <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzI-CP-ht3">
+                                        <rect key="frame" x="31.5" y="0.0" width="42" height="105"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="g6z-J7-egu" secondAttribute="bottom" id="TLg-BC-9cN"/>
+                            <constraint firstItem="g6z-J7-egu" firstAttribute="top" secondItem="mHL-cG-q9N" secondAttribute="top" id="Tld-UC-UmQ"/>
+                            <constraint firstAttribute="trailing" secondItem="g6z-J7-egu" secondAttribute="trailing" id="cQa-ZI-uCB"/>
+                            <constraint firstItem="g6z-J7-egu" firstAttribute="leading" secondItem="mHL-cG-q9N" secondAttribute="leading" id="d90-wV-swV"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
@@ -34,6 +53,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="105" height="105"/>
             <connections>
+                <outlet property="layerLabel" destination="kzI-CP-ht3" id="PEC-LG-OAG"/>
                 <outlet property="view" destination="mHL-cG-q9N" id="XQ7-Dt-UQw"/>
             </connections>
             <point key="canvasLocation" x="181.59999999999999" y="178.56071964017991"/>

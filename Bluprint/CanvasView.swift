@@ -12,11 +12,23 @@ let π = CGFloat(Double.pi)
 
 class CanvasView: UIImageView {
     
+    weak var historyManager: HistoryManager?
     // Parameters
     private let defaultLineWidth:CGFloat = 6
     private let forceSensitivity: CGFloat = 4.0
-    
     private var drawColor: UIColor = UIColor.red
+    private var chunks: [UIImage] = []
+    
+    func setup(delegate: HistoryManager){
+        self.historyManager = delegate
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let image = image{
+            self.historyManager?.appendActivity(newImage: image)
+        }
+        print("Ended")
+    }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         print("Touch")
@@ -28,6 +40,8 @@ class CanvasView: UIImageView {
         image?.draw(in: bounds)
         
         drawStroke(context: context, touch: touch)
+        //self.delegate?.chunkManager(chunk: context!)
+        
         
         // Update image
         image = UIGraphicsGetImageFromCurrentImageContext()
@@ -66,6 +80,7 @@ class CanvasView: UIImageView {
         }
         return lineWidth
     }
+    
     
     func clearCanvas(animated: Bool) {
         if animated {

@@ -7,29 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D29CB05C87259D56BB2C01A /* Pods_Bluprint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E641F46AA055A6FFEFE894A /* Pods_Bluprint.framework */; };
 		B406BBF822357DAD00FB2E97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B406BBF722357DAD00FB2E97 /* AppDelegate.swift */; };
-		B406BBFA22357DAD00FB2E97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B406BBF922357DAD00FB2E97 /* ViewController.swift */; };
+		B406BBFA22357DAD00FB2E97 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = B406BBF922357DAD00FB2E97 /* Home.swift */; };
 		B406BBFD22357DAD00FB2E97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B406BBFB22357DAD00FB2E97 /* Main.storyboard */; };
 		B406BBFF22357DAE00FB2E97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B406BBFE22357DAE00FB2E97 /* Assets.xcassets */; };
 		B406BC0222357DAF00FB2E97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B406BC0022357DAF00FB2E97 /* LaunchScreen.storyboard */; };
-		B46B5CBB223593D50045F909 /* Layers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46B5CBA223593D50045F909 /* Layers.swift */; };
+		B46B5CBB223593D50045F909 /* LayersComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46B5CBA223593D50045F909 /* LayersComponent.swift */; };
 		B46B5CBE223594A30045F909 /* LayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46B5CBC223594A30045F909 /* LayerCell.swift */; };
 		B46B5CBF223594A30045F909 /* LayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B46B5CBD223594A30045F909 /* LayerCell.xib */; };
+		B483E48C2235CBA4002C2DC8 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B483E48B2235CBA4002C2DC8 /* Extentions.swift */; };
 		B4A1BC11223580B3005F30C1 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A1BC10223580B3005F30C1 /* CanvasView.swift */; };
+		B4EEC6402235A93800C6A005 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EEC63F2235A93800C6A005 /* Protocols.swift */; };
+		B4EEC6422235B17100C6A005 /* Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EEC6412235B17100C6A005 /* Layer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36487FC9FC081998120A93F3 /* Pods-Bluprint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluprint.release.xcconfig"; path = "Target Support Files/Pods-Bluprint/Pods-Bluprint.release.xcconfig"; sourceTree = "<group>"; };
+		7E641F46AA055A6FFEFE894A /* Pods_Bluprint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bluprint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		881E9EDFB1A65CE7FD839514 /* Pods-Bluprint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluprint.debug.xcconfig"; path = "Target Support Files/Pods-Bluprint/Pods-Bluprint.debug.xcconfig"; sourceTree = "<group>"; };
 		B406BBF422357DAD00FB2E97 /* Bluprint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bluprint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B406BBF722357DAD00FB2E97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B406BBF922357DAD00FB2E97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B406BBF922357DAD00FB2E97 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		B406BBFC22357DAD00FB2E97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B406BBFE22357DAE00FB2E97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B406BC0122357DAF00FB2E97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B406BC0322357DAF00FB2E97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B46B5CBA223593D50045F909 /* Layers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layers.swift; sourceTree = "<group>"; };
+		B46B5CBA223593D50045F909 /* LayersComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayersComponent.swift; sourceTree = "<group>"; };
 		B46B5CBC223594A30045F909 /* LayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerCell.swift; sourceTree = "<group>"; };
 		B46B5CBD223594A30045F909 /* LayerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LayerCell.xib; sourceTree = "<group>"; };
+		B483E48B2235CBA4002C2DC8 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		B4A1BC10223580B3005F30C1 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		B4EEC63F2235A93800C6A005 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		B4EEC6412235B17100C6A005 /* Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D29CB05C87259D56BB2C01A /* Pods_Bluprint.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +59,8 @@
 			children = (
 				B406BBF622357DAD00FB2E97 /* Bluprint */,
 				B406BBF522357DAD00FB2E97 /* Products */,
+				F8CAD00CEC7EBD05DDCC3A28 /* Pods */,
+				D12F7F8E8BC04094D09DBCE6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,15 +75,16 @@
 		B406BBF622357DAD00FB2E97 /* Bluprint */ = {
 			isa = PBXGroup;
 			children = (
-				B406BBF722357DAD00FB2E97 /* AppDelegate.swift */,
-				B406BBF922357DAD00FB2E97 /* ViewController.swift */,
-				B406BBFB22357DAD00FB2E97 /* Main.storyboard */,
 				B406BBFE22357DAE00FB2E97 /* Assets.xcassets */,
-				B406BC0022357DAF00FB2E97 /* LaunchScreen.storyboard */,
 				B406BC0322357DAF00FB2E97 /* Info.plist */,
+				B406BBF722357DAD00FB2E97 /* AppDelegate.swift */,
+				B4EEC63E2235A91D00C6A005 /* Functionality */,
 				B4A1BC10223580B3005F30C1 /* CanvasView.swift */,
-				B46B5CBA223593D50045F909 /* Layers.swift */,
+				B406BBF922357DAD00FB2E97 /* Home.swift */,
 				B46B5CC1223594CF0045F909 /* Cells */,
+				B483E48A2235B341002C2DC8 /* Components */,
+				B406BBFB22357DAD00FB2E97 /* Main.storyboard */,
+				B406BC0022357DAF00FB2E97 /* LaunchScreen.storyboard */,
 			);
 			path = Bluprint;
 			sourceTree = "<group>";
@@ -84,6 +98,41 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		B483E48A2235B341002C2DC8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B46B5CBA223593D50045F909 /* LayersComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B4EEC63E2235A91D00C6A005 /* Functionality */ = {
+			isa = PBXGroup;
+			children = (
+				B4EEC6412235B17100C6A005 /* Layer.swift */,
+				B4EEC63F2235A93800C6A005 /* Protocols.swift */,
+				B483E48B2235CBA4002C2DC8 /* Extentions.swift */,
+			);
+			path = Functionality;
+			sourceTree = "<group>";
+		};
+		D12F7F8E8BC04094D09DBCE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E641F46AA055A6FFEFE894A /* Pods_Bluprint.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8CAD00CEC7EBD05DDCC3A28 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				881E9EDFB1A65CE7FD839514 /* Pods-Bluprint.debug.xcconfig */,
+				36487FC9FC081998120A93F3 /* Pods-Bluprint.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,9 +140,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B406BC0622357DAF00FB2E97 /* Build configuration list for PBXNativeTarget "Bluprint" */;
 			buildPhases = (
+				FBA62FBB2563BB23B40185CD /* [CP] Check Pods Manifest.lock */,
 				B406BBF022357DAD00FB2E97 /* Sources */,
 				B406BBF122357DAD00FB2E97 /* Frameworks */,
 				B406BBF222357DAD00FB2E97 /* Resources */,
+				2A600A94A4B5390CA26B01B9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,16 +202,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2A600A94A4B5390CA26B01B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bluprint/Pods-Bluprint-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Disk/Disk.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Disk.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bluprint/Pods-Bluprint-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBA62FBB2563BB23B40185CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bluprint-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B406BBF022357DAD00FB2E97 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B46B5CBE223594A30045F909 /* LayerCell.swift in Sources */,
-				B406BBFA22357DAD00FB2E97 /* ViewController.swift in Sources */,
+				B406BBFA22357DAD00FB2E97 /* Home.swift in Sources */,
 				B406BBF822357DAD00FB2E97 /* AppDelegate.swift in Sources */,
+				B4EEC6422235B17100C6A005 /* Layer.swift in Sources */,
+				B483E48C2235CBA4002C2DC8 /* Extentions.swift in Sources */,
+				B4EEC6402235A93800C6A005 /* Protocols.swift in Sources */,
 				B4A1BC11223580B3005F30C1 /* CanvasView.swift in Sources */,
-				B46B5CBB223593D50045F909 /* Layers.swift in Sources */,
+				B46B5CBB223593D50045F909 /* LayersComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +405,7 @@
 		};
 		B406BC0722357DAF00FB2E97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 881E9EDFB1A65CE7FD839514 /* Pods-Bluprint.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -325,6 +427,7 @@
 		};
 		B406BC0822357DAF00FB2E97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36487FC9FC081998120A93F3 /* Pods-Bluprint.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
