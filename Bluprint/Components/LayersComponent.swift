@@ -12,12 +12,25 @@ class LayersComponent: UICollectionView, UICollectionViewDataSource, UICollectio
     weak var layerManager: LayerManager?
     var layers: [Layer] = []
     
+    
+    
     func setup(layers: [Layer], delegate: LayerManager){
         self.layers = layers
         self.layerManager = delegate
         self.delegate = self
         self.dataSource = self
         self.register(UINib.init(nibName: "LayerCell", bundle: nil), forCellWithReuseIdentifier: "LayerCell")
+        var doubleTapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didDoubleTapCollectionView(_:)))
+        doubleTapGesture.numberOfTapsRequired = 2  // add double tap
+        self.addGestureRecognizer(doubleTapGesture)
+    }
+    
+    @objc func didDoubleTapCollectionView(_ gesture: UITapGestureRecognizer) {
+        let pointInCollectionView: CGPoint = gesture.location(in: self)
+        let selectedIndexPath: NSIndexPath = self.indexPathForItem(at: pointInCollectionView)! as NSIndexPath
+        let _: UICollectionViewCell = self.cellForItem(at: selectedIndexPath as IndexPath)!
+        print("Double tap")
+        layerManager?.hideLayer(index: layers.count - 1 - selectedIndexPath.row)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -89,9 +89,13 @@ extension Delegates: HistoryManager, LayerManager, ToolbarManager {
     }
     
     func hideLayer(index: Int) {
-        layers[index].visible = false
+        if layers[index].visible {
+            layers[index].visible = false
+        } else {
+            layers[index].visible = true
+        }
         drawCanvas(index: activeLayerIndex)
-        print("Hide")
+        print("Home: Hide")
     }
     
     

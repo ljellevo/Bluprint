@@ -17,7 +17,4 @@ class LayerCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    
-    
-
 }
