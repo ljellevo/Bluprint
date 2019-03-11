@@ -26,7 +26,12 @@ class LayersComponent: UICollectionView, UICollectionViewDataSource, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LayerCell", for: indexPath) as! LayerCell
-        cell.layerLabel.text = layers[indexPath.row].name
+        if layers[indexPath.row].name != "" {
+            cell.layerLabel.text = layers[indexPath.row].name
+        } else {
+            cell.layerLabel.text = layers[indexPath.row].id.description
+        }
+        
         return cell
     }
     

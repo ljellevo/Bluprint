@@ -47,7 +47,7 @@
                                                         </connections>
                                                     </button>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="K07-Ap-d41" customClass="LayersComponent" customModule="Bluprint" customModuleProvider="target">
-                                                        <rect key="frame" x="110" y="0.0" width="654" height="55"/>
+                                                        <rect key="frame" x="110" y="0.0" width="724" height="55"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4eM-xw-6dS">
                                                             <size key="itemSize" width="50" height="50"/>
@@ -68,16 +68,6 @@
                                                             </collectionViewCell>
                                                         </cells>
                                                     </collectionView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gb3-h2-NHU">
-                                                        <rect key="frame" x="764" y="0.0" width="70" height="55"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="70" id="pch-JC-Lso"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Revert"/>
-                                                        <connections>
-                                                            <action selector="revertLastAction:" destination="wFP-ac-41v" eventType="touchUpInside" id="kUG-yI-uSm"/>
-                                                        </connections>
-                                                    </button>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="K07-Ap-d41" firstAttribute="top" secondItem="BjA-wf-62b" secondAttribute="top" id="VPB-pO-hoA"/>
@@ -98,7 +88,19 @@
                                     <constraint firstAttribute="height" constant="55" id="nyw-wx-kMW"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MNK-1g-BcE">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dnn-8u-fZV" userLabel="Toolbar View">
+                                <rect key="frame" x="0.0" y="75" width="834" height="40"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMn-EJ-duJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="834" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="VCr-ND-jXs"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MNK-1g-BcE" userLabel="Top Bar Border View">
                                 <rect key="frame" x="0.0" y="75" width="834" height="1"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UWM-wy-8aN">
@@ -110,20 +112,33 @@
                                     <constraint firstAttribute="height" constant="1" id="ucC-pU-XCo"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Rdg-7v-mCd" userLabel="Canvas Stack">
-                                <rect key="frame" x="0.0" y="75" width="834" height="1037"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uTy-Xd-fNw" userLabel="Toolbar Border View">
+                                <rect key="frame" x="0.0" y="115" width="834" height="1"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mr4-hK-D6M">
+                                        <rect key="frame" x="0.0" y="0.0" width="834" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="7k5-Je-ALw"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="FGN-Ie-NCL"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Rdg-7v-mCd" userLabel="Background Canvas Stack">
+                                <rect key="frame" x="0.0" y="115" width="834" height="997"/>
                                 <subviews>
                                     <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="agG-g7-i9S">
-                                        <rect key="frame" x="0.0" y="0.0" width="834" height="1037"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="834" height="997"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="b8t-K0-qFt" userLabel="Canvas Stack">
-                                <rect key="frame" x="0.0" y="75" width="834" height="1037"/>
+                                <rect key="frame" x="0.0" y="115" width="834" height="997"/>
                                 <subviews>
                                     <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9RX-0H-jV6" customClass="CanvasView" customModule="Bluprint" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="834" height="1037"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="834" height="997"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                 </subviews>
@@ -131,20 +146,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uTy-Xd-fNw" secondAttribute="trailing" id="2o5-dt-6Mm"/>
                             <constraint firstItem="Gbk-qh-lv1" firstAttribute="trailing" secondItem="MNK-1g-BcE" secondAttribute="trailing" id="4ba-cp-il8"/>
-                            <constraint firstItem="b8t-K0-qFt" firstAttribute="top" secondItem="CUg-Ov-EKB" secondAttribute="bottom" id="6TN-M5-EE5"/>
                             <constraint firstItem="MNK-1g-BcE" firstAttribute="leading" secondItem="Gbk-qh-lv1" secondAttribute="leading" id="8Iv-Vt-OO2"/>
                             <constraint firstItem="Rdg-7v-mCd" firstAttribute="trailing" secondItem="Gbk-qh-lv1" secondAttribute="trailing" id="8LE-BL-110"/>
+                            <constraint firstItem="dnn-8u-fZV" firstAttribute="leading" secondItem="Gbk-qh-lv1" secondAttribute="leading" id="8lg-dU-hCo"/>
                             <constraint firstItem="CUg-Ov-EKB" firstAttribute="top" secondItem="Gbk-qh-lv1" secondAttribute="top" id="9hr-F9-M3E"/>
                             <constraint firstItem="MNK-1g-BcE" firstAttribute="top" secondItem="CUg-Ov-EKB" secondAttribute="bottom" id="EYP-ua-pPf"/>
                             <constraint firstItem="Rdg-7v-mCd" firstAttribute="bottom" secondItem="Gbk-qh-lv1" secondAttribute="bottom" id="IYK-Oj-PUR"/>
+                            <constraint firstItem="uTy-Xd-fNw" firstAttribute="leading" secondItem="0x3-rh-Hhg" secondAttribute="leading" id="J0T-M6-ZrH"/>
                             <constraint firstItem="CUg-Ov-EKB" firstAttribute="leading" secondItem="Gbk-qh-lv1" secondAttribute="leading" id="Jvk-aR-QLU"/>
+                            <constraint firstItem="Gbk-qh-lv1" firstAttribute="trailing" secondItem="dnn-8u-fZV" secondAttribute="trailing" id="N1P-ta-5VW"/>
                             <constraint firstItem="b8t-K0-qFt" firstAttribute="bottom" secondItem="Gbk-qh-lv1" secondAttribute="bottom" id="Pug-h0-1KM"/>
                             <constraint firstItem="b8t-K0-qFt" firstAttribute="leading" secondItem="Gbk-qh-lv1" secondAttribute="leading" id="X73-9K-z8J"/>
                             <constraint firstItem="Rdg-7v-mCd" firstAttribute="leading" secondItem="Gbk-qh-lv1" secondAttribute="leading" id="bfq-W6-JjE"/>
+                            <constraint firstItem="dnn-8u-fZV" firstAttribute="top" secondItem="CUg-Ov-EKB" secondAttribute="bottom" id="dY6-Ka-LS7"/>
+                            <constraint firstItem="uTy-Xd-fNw" firstAttribute="top" secondItem="dnn-8u-fZV" secondAttribute="bottom" id="gay-51-6NU"/>
                             <constraint firstItem="b8t-K0-qFt" firstAttribute="trailing" secondItem="Gbk-qh-lv1" secondAttribute="trailing" id="h9Z-25-gUD"/>
+                            <constraint firstItem="b8t-K0-qFt" firstAttribute="top" secondItem="dnn-8u-fZV" secondAttribute="bottom" id="jGe-o9-y6Q"/>
+                            <constraint firstItem="Rdg-7v-mCd" firstAttribute="top" secondItem="dnn-8u-fZV" secondAttribute="bottom" id="liY-vL-1cc"/>
                             <constraint firstItem="CUg-Ov-EKB" firstAttribute="trailing" secondItem="Gbk-qh-lv1" secondAttribute="trailing" id="sFU-P8-Qxk"/>
-                            <constraint firstItem="Rdg-7v-mCd" firstAttribute="top" secondItem="CUg-Ov-EKB" secondAttribute="bottom" id="vz4-eS-x6Z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Gbk-qh-lv1"/>
                     </view>
@@ -154,6 +175,7 @@
                         <outlet property="canvasView" destination="9RX-0H-jV6" id="kFm-OO-91X"/>
                         <outlet property="clearButton" destination="4pd-wc-FqI" id="CHk-R0-4uo"/>
                         <outlet property="layersComponent" destination="K07-Ap-d41" id="QSu-il-o1i"/>
+                        <outlet property="toolbarContainer" destination="LMn-EJ-duJ" id="TS1-q4-oMd"/>
                         <outlet property="topBar" destination="5UC-cj-SHr" id="S48-Bz-xd2"/>
                     </connections>
                 </viewController>

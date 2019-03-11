@@ -16,4 +16,10 @@ protocol HistoryManager: class{
 protocol LayerManager: class {
     func newLayer()
     func changeLayer(index: Int)
+    func hideLayer(index: Int)
+}
+
+protocol ToolbarManager: class {
+    func deleteLayer()
+    func revertAction()
 }

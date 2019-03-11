@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Ocd-4f-AtH" customClass="ToolbarComponent" customModule="Bluprint" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="834" height="46"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ncH-wp-rmE">
+                    <rect key="frame" x="0.0" y="0.0" width="834" height="46"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Layer name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16C-1o-7fx">
+                            <rect key="frame" x="0.0" y="0.0" width="201" height="46"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRN-uJ-3Gn">
+                            <rect key="frame" x="211" y="0.0" width="201" height="46"/>
+                            <state key="normal" title="Delete"/>
+                            <connections>
+                                <action selector="deleteLayer:" destination="Ocd-4f-AtH" eventType="touchUpInside" id="8go-2l-Vgq"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RhE-iM-cv9">
+                            <rect key="frame" x="422" y="0.0" width="201" height="46"/>
+                            <state key="normal" title="Unused"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNj-Of-otC">
+                            <rect key="frame" x="633" y="0.0" width="201" height="46"/>
+                            <state key="normal" title="Revert"/>
+                            <connections>
+                                <action selector="revertAction:" destination="Ocd-4f-AtH" eventType="touchUpInside" id="8Vq-5O-Zas"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ncH-wp-rmE" firstAttribute="leading" secondItem="Ocd-4f-AtH" secondAttribute="leading" id="FDb-49-rAw"/>
+                <constraint firstItem="ncH-wp-rmE" firstAttribute="top" secondItem="Ocd-4f-AtH" secondAttribute="top" id="lzR-6W-h9p"/>
+                <constraint firstAttribute="bottom" secondItem="ncH-wp-rmE" secondAttribute="bottom" id="siI-sb-kqz"/>
+                <constraint firstAttribute="trailing" secondItem="ncH-wp-rmE" secondAttribute="trailing" id="w0w-XH-uu4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="3A0-Wa-j0M"/>
+            <connections>
+                <outlet property="deleteLayer" destination="JRN-uJ-3Gn" id="BqJ-3B-6ZZ"/>
+                <outlet property="layerName" destination="16C-1o-7fx" id="kX1-AQ-hxN"/>
+                <outlet property="revertAction" destination="RNj-Of-otC" id="Ccb-IW-sk9"/>
+            </connections>
+            <point key="canvasLocation" x="-68.345323741007192" y="59.892086330935257"/>
+        </view>
+    </objects>
+</document>

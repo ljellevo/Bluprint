@@ -10,11 +10,13 @@ import Foundation
 import UIKit
 
 struct Layer {
+    var id: Int = -1
     var name: String = ""
     var history: [UIImage] = []
+    var visible: Bool = true
     
-    init(name: String) {
-        self.name = name
+    init(id: Int) {
+        self.id = id
     }
 
 }
