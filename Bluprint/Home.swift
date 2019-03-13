@@ -43,9 +43,9 @@ class Home: UIViewController{
         }
         
         if layers.count > 1 {
-            toolbar.deleteLayer.isEnabled = true
+            toolbar.deleteButton.isEnabled = true
         } else {
-            toolbar.deleteLayer.isEnabled = false
+            toolbar.deleteButton.isEnabled = false
         }
     }
     

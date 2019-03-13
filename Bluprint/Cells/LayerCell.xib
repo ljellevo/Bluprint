@@ -22,6 +22,9 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mHL-cG-q9N">
                         <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qSN-fN-4GH">
+                                <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g6z-J7-egu">
                                 <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                 <subviews>
@@ -34,10 +37,14 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="qSN-fN-4GH" firstAttribute="leading" secondItem="mHL-cG-q9N" secondAttribute="leading" id="BP0-R2-sJD"/>
+                            <constraint firstAttribute="trailing" secondItem="qSN-fN-4GH" secondAttribute="trailing" id="ChU-nD-oob"/>
+                            <constraint firstAttribute="bottom" secondItem="qSN-fN-4GH" secondAttribute="bottom" id="MdG-ip-xAW"/>
                             <constraint firstAttribute="bottom" secondItem="g6z-J7-egu" secondAttribute="bottom" id="TLg-BC-9cN"/>
                             <constraint firstItem="g6z-J7-egu" firstAttribute="top" secondItem="mHL-cG-q9N" secondAttribute="top" id="Tld-UC-UmQ"/>
+                            <constraint firstItem="qSN-fN-4GH" firstAttribute="top" secondItem="mHL-cG-q9N" secondAttribute="top" id="Uu9-Ru-eB2"/>
                             <constraint firstAttribute="trailing" secondItem="g6z-J7-egu" secondAttribute="trailing" id="cQa-ZI-uCB"/>
                             <constraint firstItem="g6z-J7-egu" firstAttribute="leading" secondItem="mHL-cG-q9N" secondAttribute="leading" id="d90-wV-swV"/>
                         </constraints>
@@ -53,6 +60,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="105" height="105"/>
             <connections>
+                <outlet property="layerImage" destination="qSN-fN-4GH" id="KjG-bb-BIn"/>
                 <outlet property="layerLabel" destination="kzI-CP-ht3" id="PEC-LG-OAG"/>
                 <outlet property="view" destination="mHL-cG-q9N" id="XQ7-Dt-UQw"/>
             </connections>
