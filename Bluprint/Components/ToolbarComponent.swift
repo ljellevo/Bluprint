@@ -27,7 +27,7 @@ class ToolbarComponent: UIView {
     }
     
     @IBAction func revertAction(_ sender: UIButton) {
-        toolbarManager?.revertAction()
+        toolbarManager?.undoAction()
         print("Revert")
     }
     

@@ -91,11 +91,13 @@ extension Delegates: HistoryManager, LayerManager, ToolbarManager {
     func hideLayer(index: Int) {
         if layers[index].visible {
             layers[index].visible = false
+            print("Home: Hide")
         } else {
             layers[index].visible = true
+            print("Home: Show")
         }
         drawCanvas(index: activeLayerIndex)
-        print("Home: Hide")
+        
     }
     
     
@@ -113,7 +115,8 @@ extension Delegates: HistoryManager, LayerManager, ToolbarManager {
         layersComponent.reloadData()
     }
     
-    func revertAction() {
+    func undoAction() {
+        //Needs refactoring, cant pop since undo/redo pluss other changes needs to be pushed on history
         if layers[activeLayerIndex].history.count > 0 {
             canvasView.clearCanvas(animated:false)
             layers[activeLayerIndex].history.removeLast()
@@ -123,7 +126,7 @@ extension Delegates: HistoryManager, LayerManager, ToolbarManager {
     }
     
     // History Manager
-    func appendActivity(newImage: UIImage) {
+    func appendAction(newImage: UIImage) {
         layers[activeLayerIndex].history.append(newImage)
     }
 }

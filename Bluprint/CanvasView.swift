@@ -25,7 +25,7 @@ class CanvasView: UIImageView {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let image = image{
-            self.historyManager?.appendActivity(newImage: image)
+            self.historyManager?.appendAction(newImage: image)
         }
         print("Ended")
     }

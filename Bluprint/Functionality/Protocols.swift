@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol HistoryManager: class{
-    func appendActivity(newImage: UIImage)
+    func appendAction(newImage: UIImage)
 }
 
 protocol LayerManager: class {
@@ -21,5 +21,5 @@ protocol LayerManager: class {
 
 protocol ToolbarManager: class {
     func deleteLayer()
-    func revertAction()
+    func undoAction()
 }
