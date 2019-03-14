@@ -38,7 +38,6 @@ class LayersComponent: UICollectionView, UICollectionViewDataSource, UICollectio
         } else {
             cell.layerLabel.text = layers[indexPath.row].id.description
         }
-        
         return cell
     }
     

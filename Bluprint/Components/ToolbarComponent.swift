@@ -29,7 +29,7 @@ class ToolbarComponent: UIView {
     
     
     @IBAction func undo(_ sender: UIButton) {
-        toolbarManager?.undoAction()
+        toolbarManager?.undo()
         print("Toolbar: Undo")
     }
     @IBAction func redo(_ sender: UIButton) {
@@ -38,10 +38,22 @@ class ToolbarComponent: UIView {
     
     @IBAction func brush(_ sender: UIButton) {
         print("Toolbar: Brush")
+        toolbarManager?.brush(button: sender)
+//        let tableViewController = UITableViewController()
+//        tableViewController.modalPresentationStyle = UIModalPresentationStyle.popover
+//        tableViewController.preferredContentSize = CGSize(width: 400, height: 400)
+//
+//        present(tableViewController, animated: true, completion: nil)
+//
+//        let popoverPresentationController = tableViewController.popoverPresentationController
+//        popoverPresentationController?.sourceView = sender
+//        popoverPresentationController?.sourceRect = CGRect(x: 0, y: 0, width: sender.frame.size.width, height: sender.frame.size.height)
+
     }
     
     @IBAction func color(_ sender: UIButton) {
         print("Toolbar: Color")
+        toolbarManager?.color(button: sender)
     }
     
     @IBAction func eraser(_ sender: UIButton) {

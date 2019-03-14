@@ -76,6 +76,10 @@ class Home: UIViewController{
 
 extension Delegates: HistoryManager, LayerManager, ToolbarManager {
 
+    
+
+    
+
     func newLayer(){
         layers.append(Layer(id: (layers[layers.count - 1]).id + 1))
         layersComponent.layers = layers.reversed()
@@ -115,7 +119,7 @@ extension Delegates: HistoryManager, LayerManager, ToolbarManager {
         layersComponent.reloadData()
     }
     
-    func undoAction() {
+    func undo() {
         //Needs refactoring, cant pop since undo/redo pluss other changes needs to be pushed on history
         if layers[activeLayerIndex].history.count > 0 {
             canvasView.clearCanvas(animated:false)
@@ -123,7 +127,23 @@ extension Delegates: HistoryManager, LayerManager, ToolbarManager {
             print("Removed last")
             drawCanvas(index: activeLayerIndex)
         }
+        
     }
+    
+    func redo() {
+        print("Home: Redo")
+    }
+    
+    func brush(button: UIButton) {
+        print("Home: Brush")
+        popoverModal(source: button, content: PopoverAction.brush)
+    }
+    
+    func color(button: UIButton) {
+        print("Home: Color")
+        popoverModal(source: button, content: PopoverAction.color)
+    }
+    
     
     // History Manager
     func appendAction(newImage: UIImage) {
@@ -139,6 +159,26 @@ extension Components {
         toolbar.translatesAutoresizingMaskIntoConstraints = true
         toolbar.frame = toolbarContainer.bounds
         toolbar.setup(delegate: self as ToolbarManager)
+    }
+    
+    func popoverModal(source: UIButton, content: PopoverAction){
+        switch content {
+        case PopoverAction.brush:
+            let ac = UIAlertController(title: "Hello!", message: "This is the brush popover.", preferredStyle: .actionSheet)
+            let popover = ac.popoverPresentationController
+            popover?.sourceView = source
+            popover?.sourceRect = CGRect(x: 15, y: -15, width: 64, height: 64)
+            present(ac, animated: true)
+            break
+        case PopoverAction.color:
+            let ac = UIAlertController(title: "Hello!", message: "This is the color popover.", preferredStyle: .actionSheet)
+            let popover = ac.popoverPresentationController
+            popover?.sourceView = source
+            popover?.sourceRect = CGRect(x: 15, y: -15, width: 64, height: 64)
+            present(ac, animated: true)
+            break
+        }
+        
     }
 }
 

@@ -20,6 +20,9 @@ protocol LayerManager: class {
 }
 
 protocol ToolbarManager: class {
+    func undo()
+    func redo()
+    func brush(button: UIButton)
+    func color(button: UIButton)
     func deleteLayer()
-    func undoAction()
 }

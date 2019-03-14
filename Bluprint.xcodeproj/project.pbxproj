@@ -21,6 +21,7 @@
 		B49AA40E2236ECBD00E66572 /* ToolbarComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = B49AA40D2236ECBD00E66572 /* ToolbarComponent.xib */; };
 		B4A1BC11223580B3005F30C1 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A1BC10223580B3005F30C1 /* CanvasView.swift */; };
 		B4CC950A2239C36900D050CE /* CustomGestureRecognizers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CC95092239C36900D050CE /* CustomGestureRecognizers.swift */; };
+		B4CC950D2239D4A900D050CE /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CC950C2239D4A900D050CE /* Enums.swift */; };
 		B4EEC6402235A93800C6A005 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EEC63F2235A93800C6A005 /* Protocols.swift */; };
 		B4EEC6422235B17100C6A005 /* Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EEC6412235B17100C6A005 /* Layer.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,7 @@
 		B49AA40D2236ECBD00E66572 /* ToolbarComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToolbarComponent.xib; sourceTree = "<group>"; };
 		B4A1BC10223580B3005F30C1 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		B4CC95092239C36900D050CE /* CustomGestureRecognizers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGestureRecognizers.swift; sourceTree = "<group>"; };
+		B4CC950C2239D4A900D050CE /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		B4EEC63F2235A93800C6A005 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		B4EEC6412235B17100C6A005 /* Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +123,7 @@
 				B4EEC63F2235A93800C6A005 /* Protocols.swift */,
 				B483E48B2235CBA4002C2DC8 /* Extentions.swift */,
 				B4CC95092239C36900D050CE /* CustomGestureRecognizers.swift */,
+				B4CC950C2239D4A900D050CE /* Enums.swift */,
 			);
 			path = Functionality;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				B4A1BC11223580B3005F30C1 /* CanvasView.swift in Sources */,
 				B4CC950A2239C36900D050CE /* CustomGestureRecognizers.swift in Sources */,
 				B46B5CBB223593D50045F909 /* LayersComponent.swift in Sources */,
+				B4CC950D2239D4A900D050CE /* Enums.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
