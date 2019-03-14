@@ -9,6 +9,7 @@
 import UIKit
 
 private typealias Delegates = Home
+private typealias Toolbar = Home
 private typealias Components = Home
 
 class Home: UIViewController{
@@ -30,23 +31,8 @@ class Home: UIViewController{
         canvasView.setup(delegate: self as HistoryManager)
         layersComponent.setup(layers: layers, delegate: self as LayerManager)
         canvasView.clearCanvas(animated:false)
-        addToolbarComponent()
+        initToolbar()
         setToolbar(layer: layers[0])
-    }
-    
-    func setToolbar(layer: Layer){
-        let toolbar = toolbarContainer.subviews[0] as! ToolbarComponent
-        if layer.name != "" {
-            toolbar.layerName.text = layer.name
-        } else {
-            toolbar.layerName.text = layer.id.description
-        }
-        
-        if layers.count > 1 {
-            toolbar.deleteButton.isEnabled = true
-        } else {
-            toolbar.deleteButton.isEnabled = false
-        }
     }
     
     @IBAction func newLayer(_ sender: UIButton) {
@@ -76,10 +62,6 @@ class Home: UIViewController{
 
 extension Delegates: HistoryManager, LayerManager, ToolbarManager {
 
-    
-
-    
-
     func newLayer(){
         layers.append(Layer(id: (layers[layers.count - 1]).id + 1))
         layersComponent.layers = layers.reversed()
@@ -104,30 +86,13 @@ extension Delegates: HistoryManager, LayerManager, ToolbarManager {
         
     }
     
-    
-    func deleteLayer() {
-        let oldLayerIndex = activeLayerIndex
-        if layers.count > 1 {
-            layers.remove(at: oldLayerIndex)
-            if activeLayerIndex == 0 {
-                changeLayer(index: 0)
-            } else {
-                changeLayer(index: activeLayerIndex - 1)
-            }
-        }
-        layersComponent.layers = layers.reversed()
-        layersComponent.reloadData()
-    }
-    
     func undo() {
-        //Needs refactoring, cant pop since undo/redo pluss other changes needs to be pushed on history
         if layers[activeLayerIndex].history.count > 0 {
             canvasView.clearCanvas(animated:false)
             layers[activeLayerIndex].history.removeLast()
             print("Removed last")
             drawCanvas(index: activeLayerIndex)
         }
-        
     }
     
     func redo() {
@@ -144,6 +109,20 @@ extension Delegates: HistoryManager, LayerManager, ToolbarManager {
         popoverModal(source: button, content: PopoverAction.color)
     }
     
+    func deleteLayer() {
+        let oldLayerIndex = activeLayerIndex
+        if layers.count > 1 {
+            layers.remove(at: oldLayerIndex)
+            if activeLayerIndex == 0 {
+                changeLayer(index: 0)
+            } else {
+                changeLayer(index: activeLayerIndex - 1)
+            }
+        }
+        layersComponent.layers = layers.reversed()
+        layersComponent.reloadData()
+    }
+    
     
     // History Manager
     func appendAction(newImage: UIImage) {
@@ -151,8 +130,8 @@ extension Delegates: HistoryManager, LayerManager, ToolbarManager {
     }
 }
 
-extension Components {
-    func addToolbarComponent(){
+extension Toolbar {
+    func initToolbar(){
         let toolbar = Bundle.main.loadNibNamed("ToolbarComponent", owner: self, options: nil)!.first as! ToolbarComponent
         self.toolbarContainer.addSubview(toolbar)
         toolbar.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -160,6 +139,24 @@ extension Components {
         toolbar.frame = toolbarContainer.bounds
         toolbar.setup(delegate: self as ToolbarManager)
     }
+    
+    func setToolbar(layer: Layer){
+        let toolbar = toolbarContainer.subviews[0] as! ToolbarComponent
+        if layer.name != "" {
+            toolbar.layerName.text = layer.name
+        } else {
+            toolbar.layerName.text = layer.id.description
+        }
+        
+        if layers.count > 1 {
+            toolbar.deleteButton.isEnabled = true
+        } else {
+            toolbar.deleteButton.isEnabled = false
+        }
+    }
+}
+
+extension Components {
     
     func popoverModal(source: UIButton, content: PopoverAction){
         switch content {
@@ -178,7 +175,6 @@ extension Components {
             present(ac, animated: true)
             break
         }
-        
     }
 }
 
