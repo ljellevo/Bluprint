@@ -7,4 +7,5 @@ target 'Bluprint' do
 
   # Pods for Bluprint
   pod 'Disk', '~> 0.4.0'
+  pod 'ChromaColorPicker'
 end

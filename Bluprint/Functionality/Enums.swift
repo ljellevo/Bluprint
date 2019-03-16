@@ -8,7 +8,13 @@
 
 import Foundation
 
-enum PopoverAction{
+enum PopoverAction {
     case brush
     case color
+}
+
+enum Brushes {
+    case pencil
+    case pen
+    
 }

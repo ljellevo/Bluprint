@@ -17,6 +17,8 @@
 		B46B5CBE223594A30045F909 /* LayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46B5CBC223594A30045F909 /* LayerCell.swift */; };
 		B46B5CBF223594A30045F909 /* LayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B46B5CBD223594A30045F909 /* LayerCell.xib */; };
 		B483E48C2235CBA4002C2DC8 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B483E48B2235CBA4002C2DC8 /* Extentions.swift */; };
+		B494882A223AF1F6003C98CA /* PopoverComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4948828223AF1F6003C98CA /* PopoverComponent.swift */; };
+		B494882B223AF1F6003C98CA /* PopoverComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4948829223AF1F6003C98CA /* PopoverComponent.xib */; };
 		B49AA40C2236EB2100E66572 /* ToolbarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49AA40B2236EB2100E66572 /* ToolbarComponent.swift */; };
 		B49AA40E2236ECBD00E66572 /* ToolbarComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = B49AA40D2236ECBD00E66572 /* ToolbarComponent.xib */; };
 		B4A1BC11223580B3005F30C1 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A1BC10223580B3005F30C1 /* CanvasView.swift */; };
@@ -41,6 +43,8 @@
 		B46B5CBC223594A30045F909 /* LayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerCell.swift; sourceTree = "<group>"; };
 		B46B5CBD223594A30045F909 /* LayerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LayerCell.xib; sourceTree = "<group>"; };
 		B483E48B2235CBA4002C2DC8 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		B4948828223AF1F6003C98CA /* PopoverComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverComponent.swift; sourceTree = "<group>"; };
+		B4948829223AF1F6003C98CA /* PopoverComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopoverComponent.xib; sourceTree = "<group>"; };
 		B49AA40B2236EB2100E66572 /* ToolbarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarComponent.swift; sourceTree = "<group>"; };
 		B49AA40D2236ECBD00E66572 /* ToolbarComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToolbarComponent.xib; sourceTree = "<group>"; };
 		B4A1BC10223580B3005F30C1 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				B46B5CBA223593D50045F909 /* LayersComponent.swift */,
 				B49AA40B2236EB2100E66572 /* ToolbarComponent.swift */,
 				B49AA40D2236ECBD00E66572 /* ToolbarComponent.xib */,
+				B4948828223AF1F6003C98CA /* PopoverComponent.swift */,
+				B4948829223AF1F6003C98CA /* PopoverComponent.xib */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -206,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B49AA40E2236ECBD00E66572 /* ToolbarComponent.xib in Resources */,
+				B494882B223AF1F6003C98CA /* PopoverComponent.xib in Resources */,
 				B406BC0222357DAF00FB2E97 /* LaunchScreen.storyboard in Resources */,
 				B406BBFF22357DAE00FB2E97 /* Assets.xcassets in Resources */,
 				B406BBFD22357DAD00FB2E97 /* Main.storyboard in Resources */,
@@ -225,12 +232,14 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Bluprint/Pods-Bluprint-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChromaColorPicker/ChromaColorPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/Disk/Disk.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChromaColorPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Disk.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +279,7 @@
 				B46B5CBE223594A30045F909 /* LayerCell.swift in Sources */,
 				B406BBFA22357DAD00FB2E97 /* Home.swift in Sources */,
 				B406BBF822357DAD00FB2E97 /* AppDelegate.swift in Sources */,
+				B494882A223AF1F6003C98CA /* PopoverComponent.swift in Sources */,
 				B4EEC6422235B17100C6A005 /* Layer.swift in Sources */,
 				B49AA40C2236EB2100E66572 /* ToolbarComponent.swift in Sources */,
 				B483E48C2235CBA4002C2DC8 /* Extentions.swift in Sources */,

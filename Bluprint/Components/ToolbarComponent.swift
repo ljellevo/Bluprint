@@ -9,11 +9,14 @@
 import Foundation
 import UIKit
 
+private typealias Textfield = ToolbarComponent
+
+
 class ToolbarComponent: UIView {
     
     weak var toolbarManager: ToolbarManager?
     
-    @IBOutlet weak var layerName: UILabel!
+    @IBOutlet weak var name: UITextField!
     
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var redoButton: UIButton!
@@ -25,34 +28,22 @@ class ToolbarComponent: UIView {
     
     func setup(delegate: ToolbarManager){
         toolbarManager = delegate
+        name.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
-    
     
     @IBAction func undo(_ sender: UIButton) {
         toolbarManager?.undo()
-        print("Toolbar: Undo")
     }
+    
     @IBAction func redo(_ sender: UIButton) {
         print("Toolbar: Redo")
     }
     
     @IBAction func brush(_ sender: UIButton) {
-        print("Toolbar: Brush")
         toolbarManager?.brush(button: sender)
-//        let tableViewController = UITableViewController()
-//        tableViewController.modalPresentationStyle = UIModalPresentationStyle.popover
-//        tableViewController.preferredContentSize = CGSize(width: 400, height: 400)
-//
-//        present(tableViewController, animated: true, completion: nil)
-//
-//        let popoverPresentationController = tableViewController.popoverPresentationController
-//        popoverPresentationController?.sourceView = sender
-//        popoverPresentationController?.sourceRect = CGRect(x: 0, y: 0, width: sender.frame.size.width, height: sender.frame.size.height)
-
     }
     
     @IBAction func color(_ sender: UIButton) {
-        print("Toolbar: Color")
         toolbarManager?.color(button: sender)
     }
     
@@ -62,7 +53,16 @@ class ToolbarComponent: UIView {
     
     @IBAction func deleteLayer(_ sender: UIButton) {
         toolbarManager?.deleteLayer()
-        print("Toolbar: Delete layer")
     }
-    
 }
+
+extension Textfield {
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        if let newName = name.text {
+            toolbarManager?.changedName(newName: newName)
+        }
+    }
+}
+
+

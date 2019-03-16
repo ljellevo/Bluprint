@@ -12,7 +12,8 @@ private typealias Delegates = Home
 private typealias Toolbar = Home
 private typealias Components = Home
 
-class Home: UIViewController{
+
+class Home: UIViewController {
     
     @IBOutlet weak var canvasView: CanvasView!
     @IBOutlet weak var backgroundCanvas: UIImageView!
@@ -44,7 +45,7 @@ class Home: UIViewController{
         canvasView.clearCanvas(animated: false)
     }
     
-    func drawCanvas(index: Int){
+    func drawCanvas(index: Int) {
         canvasView.image = layers[index].history.last
         
         backgroundCanvas.layer.sublayers = []
@@ -62,7 +63,7 @@ class Home: UIViewController{
 
 extension Delegates: HistoryManager, LayerManager, ToolbarManager {
 
-    func newLayer(){
+    func newLayer() {
         layers.append(Layer(id: (layers[layers.count - 1]).id + 1))
         layersComponent.layers = layers.reversed()
         layersComponent.reloadData()
@@ -70,6 +71,7 @@ extension Delegates: HistoryManager, LayerManager, ToolbarManager {
     
     func changeLayer(index: Int) {
         activeLayerIndex = index
+        canvasView.setDrawColor(color: layers[activeLayerIndex].color)
         drawCanvas(index: index)
         setToolbar(layer: layers[activeLayerIndex])
     }
@@ -77,12 +79,16 @@ extension Delegates: HistoryManager, LayerManager, ToolbarManager {
     func hideLayer(index: Int) {
         if layers[index].visible {
             layers[index].visible = false
-            print("Home: Hide")
         } else {
             layers[index].visible = true
-            print("Home: Show")
         }
         drawCanvas(index: activeLayerIndex)
+    }
+    
+    func changedName(newName: String){
+        layers[activeLayerIndex].name = newName
+        layersComponent.layers = layers.reversed()
+        layersComponent.reloadData()
         
     }
     
@@ -90,7 +96,6 @@ extension Delegates: HistoryManager, LayerManager, ToolbarManager {
         if layers[activeLayerIndex].history.count > 0 {
             canvasView.clearCanvas(animated:false)
             layers[activeLayerIndex].history.removeLast()
-            print("Removed last")
             drawCanvas(index: activeLayerIndex)
         }
     }
@@ -100,12 +105,10 @@ extension Delegates: HistoryManager, LayerManager, ToolbarManager {
     }
     
     func brush(button: UIButton) {
-        print("Home: Brush")
         popoverModal(source: button, content: PopoverAction.brush)
     }
     
     func color(button: UIButton) {
-        print("Home: Color")
         popoverModal(source: button, content: PopoverAction.color)
     }
     
@@ -131,7 +134,8 @@ extension Delegates: HistoryManager, LayerManager, ToolbarManager {
 }
 
 extension Toolbar {
-    func initToolbar(){
+    
+    func initToolbar() {
         let toolbar = Bundle.main.loadNibNamed("ToolbarComponent", owner: self, options: nil)!.first as! ToolbarComponent
         self.toolbarContainer.addSubview(toolbar)
         toolbar.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -140,12 +144,12 @@ extension Toolbar {
         toolbar.setup(delegate: self as ToolbarManager)
     }
     
-    func setToolbar(layer: Layer){
+    func setToolbar(layer: Layer) {
         let toolbar = toolbarContainer.subviews[0] as! ToolbarComponent
         if layer.name != "" {
-            toolbar.layerName.text = layer.name
+            toolbar.name.text = layer.name
         } else {
-            toolbar.layerName.text = layer.id.description
+            toolbar.name.text = ""
         }
         
         if layers.count > 1 {
@@ -156,9 +160,9 @@ extension Toolbar {
     }
 }
 
-extension Components {
+extension Components: UIPopoverPresentationControllerDelegate, BrushAndColorManager {
     
-    func popoverModal(source: UIButton, content: PopoverAction){
+    func popoverModal(source: UIButton, content: PopoverAction) {
         switch content {
         case PopoverAction.brush:
             let ac = UIAlertController(title: "Hello!", message: "This is the brush popover.", preferredStyle: .actionSheet)
@@ -166,16 +170,30 @@ extension Components {
             popover?.sourceView = source
             popover?.sourceRect = CGRect(x: 15, y: -15, width: 64, height: 64)
             present(ac, animated: true)
-            break
         case PopoverAction.color:
-            let ac = UIAlertController(title: "Hello!", message: "This is the color popover.", preferredStyle: .actionSheet)
-            let popover = ac.popoverPresentationController
-            popover?.sourceView = source
-            popover?.sourceRect = CGRect(x: 15, y: -15, width: 64, height: 64)
-            present(ac, animated: true)
-            break
+            let popover = Bundle.main.loadNibNamed("PopoverComponent", owner: self, options: nil)!.first as! PopoverComponent
+            popover.modalPresentationStyle = .popover
+            let popoverController = popover.popoverPresentationController
+            popoverController?.delegate = self
+            popoverController?.sourceView = source
+            popoverController?.sourceRect = CGRect(x: 45, y: 45, width: 0, height: 0)
+            popoverController?.permittedArrowDirections = [.down, .up]
+            popover.preferredContentSize = CGSize(width: 250, height: 350)
+            popover.load(delegate: self as BrushAndColorManager, color: layers[activeLayerIndex].color)
+            present(popover, animated: true)
         }
     }
+    
+    func colorChanged(color: UIColor) {
+        layers[activeLayerIndex].color = color
+        canvasView.setDrawColor(color: color)
+    }
+    
+    func brushChanged(brush: Brushes) {
+        print("Home: Brush Changed")
+    }
 }
+
+
 
 

@@ -7,77 +7,100 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05FDB877BFDDA5FB74889A48B79C194F /* Disk+InternalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDEAF4DCDE02630811084F08019940E /* Disk+InternalHelpers.swift */; };
-		0977B3211F7AA7CAEF2294CA25E8009F /* Disk+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECCBB0736A70E18322C705748CFC43 /* Disk+Helpers.swift */; };
-		09AE97E68E0272DB6871EF8456A6BF20 /* Disk+[Data].swift in Sources */ = {isa = PBXBuildFile; fileRef = 91289A7C18BFB31FD1DEE7342FB464F1 /* Disk+[Data].swift */; };
-		2525E9F5E2BE16D008345DEBE8B7F4E9 /* Pods-Bluprint-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D73D73F0AC4B9F063D90EF5841EC2DCA /* Pods-Bluprint-dummy.m */; };
-		3DF8203894146E649CC3C2EE1ECFBE98 /* Disk+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D567112740D1C7E99558C0A87982AAA /* Disk+Errors.swift */; };
-		4F37E0EF225C192F9DCB0D3336CC96C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		5024E48B47EEF14E117CB50EC8184557 /* Disk-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 454E4A9C3429E7BBABB7CEE5B4797761 /* Disk-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62C6FAA8A8FD7F4FDA62F22DBC5C7CD8 /* Disk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA40549CEBBFAAE901F19C5B9965EFA /* Disk-dummy.m */; };
+		026C52E94076F814AD2A18F911588CC5 /* ChromaColorPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BAF399CEBE75C17FAAE5FCAEF3827B79 /* ChromaColorPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05FDB877BFDDA5FB74889A48B79C194F /* Disk+InternalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F87ACCDE982DF3DA6198231A3B63B87 /* Disk+InternalHelpers.swift */; };
+		0977B3211F7AA7CAEF2294CA25E8009F /* Disk+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CAC4A6214626DAF39DB46BF992A97C /* Disk+Helpers.swift */; };
+		09AE97E68E0272DB6871EF8456A6BF20 /* Disk+[Data].swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AB0960850BC3683AB52C51CE48B302 /* Disk+[Data].swift */; };
+		0D206B88E406422F3E9A1FB13FEBAF41 /* UIColor+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67B870F79E76E4D75EF14C406A14E06 /* UIColor+Utilities.swift */; };
+		215DB813F10B44AF95AF099DBAAA1D43 /* Pods-Bluprint-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C4A5F5319E2DE2A27CB432547BBCACC2 /* Pods-Bluprint-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		340CBE4A416D39CAC507DBBD5928BAF0 /* ChromaHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5DDBE84CDF57A6FC2658AD0C4BD021 /* ChromaHandle.swift */; };
+		363E5BECAA20AF25F8DE72EDC56FB767 /* ChromaColorPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 449CC97CDB6BD4F02F8B75FA6C60C60C /* ChromaColorPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DF8203894146E649CC3C2EE1ECFBE98 /* Disk+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CFC172050C672BD717CB54E7804244 /* Disk+Errors.swift */; };
+		4667ACED43688100C2718AD2A0C973AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		4FBA139F2C3B722D5BA65F1FC7632229 /* ChromaColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9A23DDE9E692E4B6BF20DB7C39B1A2 /* ChromaColorPicker.swift */; };
+		5024E48B47EEF14E117CB50EC8184557 /* Disk-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A2C8F83CF028FADCCB3D1DCC1A753D6F /* Disk-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5388B3A897EB4D98607215D607977FB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		62C6FAA8A8FD7F4FDA62F22DBC5C7CD8 /* Disk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E920DFDC0833B43CF64A1721C1E91CA /* Disk-dummy.m */; };
 		66A00FFC49E1777734BD08C1F19486E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		80CD56FDEA1B55D3AD2ECDBC92834BF9 /* Disk+[UIImage].swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8F5B08062179972F8DB524192688A9 /* Disk+[UIImage].swift */; };
-		85A724A742E485CE02045C769D7F3F59 /* Disk+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6021E80C8470F0C4E28225CF9D82CE /* Disk+Codable.swift */; };
-		A415E8FBD9917689FD899F97DCD5FF0C /* Disk.h in Headers */ = {isa = PBXBuildFile; fileRef = D2E621187DBB191581606F31737E34D6 /* Disk.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B0CB897AEA9E2E87230BF191358998BC /* Pods-Bluprint-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C4A5F5319E2DE2A27CB432547BBCACC2 /* Pods-Bluprint-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BB37FF10EBA050CD29145F84FEB31A07 /* Disk+VolumeInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF1A0A945FCD494A4A91F29D8682A23 /* Disk+VolumeInformation.swift */; };
-		D8E5ABC0555B5361FD278962BBBE72D5 /* Disk+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4A6E13B96B74E004FD045E2334942E /* Disk+UIImage.swift */; };
-		E706559F9BFF201B274832BE337347C6 /* Disk+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DC7A16BD513E6FE9F239B28A0B3BD6 /* Disk+Data.swift */; };
-		F7FCC4C410DF9C58DD2250209BF5485A /* Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057F5042E1F63E0EBA82609AE403E31 /* Disk.swift */; };
+		67B00399194FED42614A03902084DD3E /* Pods-Bluprint-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D73D73F0AC4B9F063D90EF5841EC2DCA /* Pods-Bluprint-dummy.m */; };
+		80CD56FDEA1B55D3AD2ECDBC92834BF9 /* Disk+[UIImage].swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F300467D80DDD29F002F8279E1A3292 /* Disk+[UIImage].swift */; };
+		85A724A742E485CE02045C769D7F3F59 /* Disk+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0840FFB6125B4C0D1889B068104CCB22 /* Disk+Codable.swift */; };
+		94735EB1BFBE473841978C26C1B45529 /* ColorModeToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5170B0C17791881BC6E389E3B4FECE /* ColorModeToggleButton.swift */; };
+		A04545A74ADF966AF179551AFA489D9B /* ChromaAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB9FF53E34D3561EEF87B093B6EF93A /* ChromaAddButton.swift */; };
+		A415E8FBD9917689FD899F97DCD5FF0C /* Disk.h in Headers */ = {isa = PBXBuildFile; fileRef = ED2965F3CFF9CCAEFAFC4E709A16940D /* Disk.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1B8FB6C7C917BF802F494CB577F4687 /* ChromaShadeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88AD3605E40F1CF41A44F237441393 /* ChromaShadeSlider.swift */; };
+		B4F7769657403DBFF38EAAD7F6837D21 /* ChromaColorPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 797DB26E139F28D7EA2CCB51CE1858B0 /* ChromaColorPicker-dummy.m */; };
+		BB37FF10EBA050CD29145F84FEB31A07 /* Disk+VolumeInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E276A0ABA224EC137F7F97C92070BDD /* Disk+VolumeInformation.swift */; };
+		D8E5ABC0555B5361FD278962BBBE72D5 /* Disk+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BE59C29ED397D396A7FC1CE36631CF /* Disk+UIImage.swift */; };
+		E706559F9BFF201B274832BE337347C6 /* Disk+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07F4C17B9AA1E72D5E21AF554A2C436 /* Disk+Data.swift */; };
+		F7FCC4C410DF9C58DD2250209BF5485A /* Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = F448DA36A7EB3079EE8B09D0FA28FA61 /* Disk.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3D9302CDA7D8F56C7B78AC3379BB6D32 /* PBXContainerItemProxy */ = {
+		AA65615D7E68D209FAB69149422E1DB0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6CDC6F0CAFAE1779F0B239ED6E2B769B;
 			remoteInfo = Disk;
 		};
+		CC47C8FCCE382D66AE15B026AB3830C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FEAFBB12C7096AEFCA1AA8FA96E57D73;
+			remoteInfo = ChromaColorPicker;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0057F5042E1F63E0EBA82609AE403E31 /* Disk.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Disk.swift; path = Sources/Disk.swift; sourceTree = "<group>"; };
-		0D567112740D1C7E99558C0A87982AAA /* Disk+Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+Errors.swift"; path = "Sources/Disk+Errors.swift"; sourceTree = "<group>"; };
-		109DA7CFAD9E985838F24AB5211082EA /* Disk.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Disk.xcconfig; sourceTree = "<group>"; };
-		21EE8207642C2A436D560F40E45A9E88 /* Disk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Disk.framework; path = Disk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0840FFB6125B4C0D1889B068104CCB22 /* Disk+Codable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+Codable.swift"; path = "Sources/Disk+Codable.swift"; sourceTree = "<group>"; };
+		1F10B5A66D139DF895D3FB5131414135 /* Disk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Disk.framework; path = Disk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F300467D80DDD29F002F8279E1A3292 /* Disk+[UIImage].swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+[UIImage].swift"; path = "Sources/Disk+[UIImage].swift"; sourceTree = "<group>"; };
 		29A651DC55084F1D17CFBFA45E1BD6DB /* Pods-Bluprint.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Bluprint.modulemap"; sourceTree = "<group>"; };
-		2BDEAF4DCDE02630811084F08019940E /* Disk+InternalHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+InternalHelpers.swift"; path = "Sources/Disk+InternalHelpers.swift"; sourceTree = "<group>"; };
-		42DC7A16BD513E6FE9F239B28A0B3BD6 /* Disk+Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+Data.swift"; path = "Sources/Disk+Data.swift"; sourceTree = "<group>"; };
-		43A904080CB92E8D01FED7F58138D765 /* Pods_Bluprint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Bluprint.framework; path = "Pods-Bluprint.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		454E4A9C3429E7BBABB7CEE5B4797761 /* Disk-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Disk-umbrella.h"; sourceTree = "<group>"; };
-		5CA40549CEBBFAAE901F19C5B9965EFA /* Disk-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Disk-dummy.m"; sourceTree = "<group>"; };
-		5D6021E80C8470F0C4E28225CF9D82CE /* Disk+Codable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+Codable.swift"; path = "Sources/Disk+Codable.swift"; sourceTree = "<group>"; };
-		686FACE5B35A81C7E647C667A0A58C95 /* Disk.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Disk.modulemap; sourceTree = "<group>"; };
-		6FECCBB0736A70E18322C705748CFC43 /* Disk+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+Helpers.swift"; path = "Sources/Disk+Helpers.swift"; sourceTree = "<group>"; };
+		2A37C7192FD28BAFB5EF73A9C0CE5FFD /* ChromaColorPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ChromaColorPicker.xcconfig; sourceTree = "<group>"; };
+		3F87ACCDE982DF3DA6198231A3B63B87 /* Disk+InternalHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+InternalHelpers.swift"; path = "Sources/Disk+InternalHelpers.swift"; sourceTree = "<group>"; };
+		40CAC4A6214626DAF39DB46BF992A97C /* Disk+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+Helpers.swift"; path = "Sources/Disk+Helpers.swift"; sourceTree = "<group>"; };
+		42AB0960850BC3683AB52C51CE48B302 /* Disk+[Data].swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+[Data].swift"; path = "Sources/Disk+[Data].swift"; sourceTree = "<group>"; };
+		449CC97CDB6BD4F02F8B75FA6C60C60C /* ChromaColorPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChromaColorPicker.h; path = ChromaColorPicker/ChromaColorPicker.h; sourceTree = "<group>"; };
+		4B5DDBE84CDF57A6FC2658AD0C4BD021 /* ChromaHandle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChromaHandle.swift; path = ChromaColorPicker/ChromaHandle.swift; sourceTree = "<group>"; };
+		569690F94407051CC9E7FBDE0AA30634 /* ChromaColorPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ChromaColorPicker.modulemap; sourceTree = "<group>"; };
+		5815E63783B677C2005F0335BCB04C3F /* Pods_Bluprint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Bluprint.framework; path = "Pods-Bluprint.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E276A0ABA224EC137F7F97C92070BDD /* Disk+VolumeInformation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+VolumeInformation.swift"; path = "Sources/Disk+VolumeInformation.swift"; sourceTree = "<group>"; };
 		741F8961A0E79BCE72D16B562D67FA49 /* Pods-Bluprint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Bluprint.debug.xcconfig"; sourceTree = "<group>"; };
-		7E4A6E13B96B74E004FD045E2334942E /* Disk+UIImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+UIImage.swift"; path = "Sources/Disk+UIImage.swift"; sourceTree = "<group>"; };
-		91289A7C18BFB31FD1DEE7342FB464F1 /* Disk+[Data].swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+[Data].swift"; path = "Sources/Disk+[Data].swift"; sourceTree = "<group>"; };
-		9BBBA293B4A0A359DFCB6C3FFF56BC0A /* Disk-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Disk-prefix.pch"; sourceTree = "<group>"; };
-		A6FBB51691BAD9F0869719131E2E68C6 /* Disk-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Disk-Info.plist"; sourceTree = "<group>"; };
-		ABF1A0A945FCD494A4A91F29D8682A23 /* Disk+VolumeInformation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+VolumeInformation.swift"; path = "Sources/Disk+VolumeInformation.swift"; sourceTree = "<group>"; };
+		797DB26E139F28D7EA2CCB51CE1858B0 /* ChromaColorPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ChromaColorPicker-dummy.m"; sourceTree = "<group>"; };
+		7E105F0FBBDFB186612E53560BC991EC /* Disk.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Disk.xcconfig; sourceTree = "<group>"; };
+		7E920DFDC0833B43CF64A1721C1E91CA /* Disk-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Disk-dummy.m"; sourceTree = "<group>"; };
+		9BAFD8601C1E1018D06FC223763854CE /* ChromaColorPicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ChromaColorPicker-Info.plist"; sourceTree = "<group>"; };
+		A07F4C17B9AA1E72D5E21AF554A2C436 /* Disk+Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+Data.swift"; path = "Sources/Disk+Data.swift"; sourceTree = "<group>"; };
+		A1C997E821C65CF48F7A2323D58C7C34 /* ChromaColorPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ChromaColorPicker-prefix.pch"; sourceTree = "<group>"; };
+		A2C8F83CF028FADCCB3D1DCC1A753D6F /* Disk-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Disk-umbrella.h"; sourceTree = "<group>"; };
+		AA12CC58DCBA7BB201E19744B5011CEA /* ChromaColorPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ChromaColorPicker.framework; path = ChromaColorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA9A23DDE9E692E4B6BF20DB7C39B1A2 /* ChromaColorPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChromaColorPicker.swift; path = ChromaColorPicker/ChromaColorPicker.swift; sourceTree = "<group>"; };
 		B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B51F82F98960D8F2285B1DCF1C9F8716 /* Pods-Bluprint-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Bluprint-Info.plist"; sourceTree = "<group>"; };
+		BAF399CEBE75C17FAAE5FCAEF3827B79 /* ChromaColorPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ChromaColorPicker-umbrella.h"; sourceTree = "<group>"; };
 		C4A5F5319E2DE2A27CB432547BBCACC2 /* Pods-Bluprint-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Bluprint-umbrella.h"; sourceTree = "<group>"; };
+		C67B870F79E76E4D75EF14C406A14E06 /* UIColor+Utilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Utilities.swift"; path = "ChromaColorPicker/UIColor+Utilities.swift"; sourceTree = "<group>"; };
+		CDB9FF53E34D3561EEF87B093B6EF93A /* ChromaAddButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChromaAddButton.swift; path = ChromaColorPicker/ChromaAddButton.swift; sourceTree = "<group>"; };
 		D078396CCCEDE776B26126C151EB34DD /* Pods-Bluprint-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Bluprint-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D26C6DC50EBFC7918C2DBBA5B3101CBA /* Pods-Bluprint-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Bluprint-acknowledgements.plist"; sourceTree = "<group>"; };
-		D2E621187DBB191581606F31737E34D6 /* Disk.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Disk.h; path = Sources/Disk.h; sourceTree = "<group>"; };
 		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D6EBDB76F620AF23A15D1F79CA955407 /* Disk-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Disk-prefix.pch"; sourceTree = "<group>"; };
 		D73D73F0AC4B9F063D90EF5841EC2DCA /* Pods-Bluprint-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Bluprint-dummy.m"; sourceTree = "<group>"; };
 		DDE2FD73D08DEDB1C97F74F3799E201F /* Pods-Bluprint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Bluprint.release.xcconfig"; sourceTree = "<group>"; };
+		E5BE59C29ED397D396A7FC1CE36631CF /* Disk+UIImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+UIImage.swift"; path = "Sources/Disk+UIImage.swift"; sourceTree = "<group>"; };
+		E9CFC172050C672BD717CB54E7804244 /* Disk+Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+Errors.swift"; path = "Sources/Disk+Errors.swift"; sourceTree = "<group>"; };
+		ED2965F3CFF9CCAEFAFC4E709A16940D /* Disk.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Disk.h; path = Sources/Disk.h; sourceTree = "<group>"; };
+		EE5170B0C17791881BC6E389E3B4FECE /* ColorModeToggleButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorModeToggleButton.swift; path = ChromaColorPicker/ColorModeToggleButton.swift; sourceTree = "<group>"; };
+		EF5799A3D505725740706AE0EBDD7277 /* Disk-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Disk-Info.plist"; sourceTree = "<group>"; };
+		F448DA36A7EB3079EE8B09D0FA28FA61 /* Disk.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Disk.swift; path = Sources/Disk.swift; sourceTree = "<group>"; };
+		F50D668123502B03756658936B33B52B /* Disk.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Disk.modulemap; sourceTree = "<group>"; };
 		F7FE7CFA9A616F0E161D48B56F2C669F /* Pods-Bluprint-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Bluprint-frameworks.sh"; sourceTree = "<group>"; };
-		FE8F5B08062179972F8DB524192688A9 /* Disk+[UIImage].swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+[UIImage].swift"; path = "Sources/Disk+[UIImage].swift"; sourceTree = "<group>"; };
+		FA88AD3605E40F1CF41A44F237441393 /* ChromaShadeSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChromaShadeSlider.swift; path = ChromaColorPicker/ChromaShadeSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		313340F7CFBA9C6A17023EF26455D8F1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4F37E0EF225C192F9DCB0D3336CC96C6 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4DAF2EC04BD7C02F751486F70B421CFC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -86,27 +109,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A6D9D0FC09DCC33DD2C7DC0AFB284DAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5388B3A897EB4D98607215D607977FB4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A90ED9DF82217A294B5838405604668C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4667ACED43688100C2718AD2A0C973AF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4113E599B9716465B5AC5A422FF86F16 /* Disk */ = {
+		448AFB5686E81E858585F77C0D788CD8 /* ChromaColorPicker */ = {
 			isa = PBXGroup;
 			children = (
-				D2E621187DBB191581606F31737E34D6 /* Disk.h */,
-				0057F5042E1F63E0EBA82609AE403E31 /* Disk.swift */,
-				91289A7C18BFB31FD1DEE7342FB464F1 /* Disk+[Data].swift */,
-				FE8F5B08062179972F8DB524192688A9 /* Disk+[UIImage].swift */,
-				5D6021E80C8470F0C4E28225CF9D82CE /* Disk+Codable.swift */,
-				42DC7A16BD513E6FE9F239B28A0B3BD6 /* Disk+Data.swift */,
-				0D567112740D1C7E99558C0A87982AAA /* Disk+Errors.swift */,
-				6FECCBB0736A70E18322C705748CFC43 /* Disk+Helpers.swift */,
-				2BDEAF4DCDE02630811084F08019940E /* Disk+InternalHelpers.swift */,
-				7E4A6E13B96B74E004FD045E2334942E /* Disk+UIImage.swift */,
-				ABF1A0A945FCD494A4A91F29D8682A23 /* Disk+VolumeInformation.swift */,
-				48E07E4CFC4AB421275CC7013DE62D66 /* Support Files */,
+				CDB9FF53E34D3561EEF87B093B6EF93A /* ChromaAddButton.swift */,
+				449CC97CDB6BD4F02F8B75FA6C60C60C /* ChromaColorPicker.h */,
+				AA9A23DDE9E692E4B6BF20DB7C39B1A2 /* ChromaColorPicker.swift */,
+				4B5DDBE84CDF57A6FC2658AD0C4BD021 /* ChromaHandle.swift */,
+				FA88AD3605E40F1CF41A44F237441393 /* ChromaShadeSlider.swift */,
+				EE5170B0C17791881BC6E389E3B4FECE /* ColorModeToggleButton.swift */,
+				C67B870F79E76E4D75EF14C406A14E06 /* UIColor+Utilities.swift */,
+				E1ACCEF8FA991056315C2DDFA0D4D55F /* Support Files */,
 			);
-			name = Disk;
-			path = Disk;
+			name = ChromaColorPicker;
+			path = ChromaColorPicker;
 			sourceTree = "<group>";
 		};
 		44D5347904CF754D6785B84253F2574A /* iOS */ = {
@@ -115,28 +150,6 @@
 				D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		48E07E4CFC4AB421275CC7013DE62D66 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				686FACE5B35A81C7E647C667A0A58C95 /* Disk.modulemap */,
-				109DA7CFAD9E985838F24AB5211082EA /* Disk.xcconfig */,
-				5CA40549CEBBFAAE901F19C5B9965EFA /* Disk-dummy.m */,
-				A6FBB51691BAD9F0869719131E2E68C6 /* Disk-Info.plist */,
-				9BBBA293B4A0A359DFCB6C3FFF56BC0A /* Disk-prefix.pch */,
-				454E4A9C3429E7BBABB7CEE5B4797761 /* Disk-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Disk";
-			sourceTree = "<group>";
-		};
-		6DEEF0ADCF6E579B75DC7062EBE41939 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4113E599B9716465B5AC5A422FF86F16 /* Disk */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		7A22D1608B80A4983CE387D0FACFDF91 /* Targets Support Files */ = {
@@ -152,17 +165,18 @@
 			children = (
 				B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				6DEEF0ADCF6E579B75DC7062EBE41939 /* Pods */,
-				92C923848D352B50BEE4D8C02277CCE1 /* Products */,
+				AD4F1205EA9230B0D4D354A556FA0B1E /* Pods */,
+				984C38321E665CA96E33374BF5300D9A /* Products */,
 				7A22D1608B80A4983CE387D0FACFDF91 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		92C923848D352B50BEE4D8C02277CCE1 /* Products */ = {
+		984C38321E665CA96E33374BF5300D9A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				21EE8207642C2A436D560F40E45A9E88 /* Disk.framework */,
-				43A904080CB92E8D01FED7F58138D765 /* Pods_Bluprint.framework */,
+				AA12CC58DCBA7BB201E19744B5011CEA /* ChromaColorPicker.framework */,
+				1F10B5A66D139DF895D3FB5131414135 /* Disk.framework */,
+				5815E63783B677C2005F0335BCB04C3F /* Pods_Bluprint.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -184,6 +198,15 @@
 			path = "Target Support Files/Pods-Bluprint";
 			sourceTree = "<group>";
 		};
+		AD4F1205EA9230B0D4D354A556FA0B1E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				448AFB5686E81E858585F77C0D788CD8 /* ChromaColorPicker */,
+				D7BA097808FD868A31BC2158C7331045 /* Disk */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,14 +215,71 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C9D586D96257ACEFC17AAD430204653B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F50D668123502B03756658936B33B52B /* Disk.modulemap */,
+				7E105F0FBBDFB186612E53560BC991EC /* Disk.xcconfig */,
+				7E920DFDC0833B43CF64A1721C1E91CA /* Disk-dummy.m */,
+				EF5799A3D505725740706AE0EBDD7277 /* Disk-Info.plist */,
+				D6EBDB76F620AF23A15D1F79CA955407 /* Disk-prefix.pch */,
+				A2C8F83CF028FADCCB3D1DCC1A753D6F /* Disk-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Disk";
+			sourceTree = "<group>";
+		};
+		D7BA097808FD868A31BC2158C7331045 /* Disk */ = {
+			isa = PBXGroup;
+			children = (
+				ED2965F3CFF9CCAEFAFC4E709A16940D /* Disk.h */,
+				F448DA36A7EB3079EE8B09D0FA28FA61 /* Disk.swift */,
+				42AB0960850BC3683AB52C51CE48B302 /* Disk+[Data].swift */,
+				1F300467D80DDD29F002F8279E1A3292 /* Disk+[UIImage].swift */,
+				0840FFB6125B4C0D1889B068104CCB22 /* Disk+Codable.swift */,
+				A07F4C17B9AA1E72D5E21AF554A2C436 /* Disk+Data.swift */,
+				E9CFC172050C672BD717CB54E7804244 /* Disk+Errors.swift */,
+				40CAC4A6214626DAF39DB46BF992A97C /* Disk+Helpers.swift */,
+				3F87ACCDE982DF3DA6198231A3B63B87 /* Disk+InternalHelpers.swift */,
+				E5BE59C29ED397D396A7FC1CE36631CF /* Disk+UIImage.swift */,
+				5E276A0ABA224EC137F7F97C92070BDD /* Disk+VolumeInformation.swift */,
+				C9D586D96257ACEFC17AAD430204653B /* Support Files */,
+			);
+			name = Disk;
+			path = Disk;
+			sourceTree = "<group>";
+		};
+		E1ACCEF8FA991056315C2DDFA0D4D55F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				569690F94407051CC9E7FBDE0AA30634 /* ChromaColorPicker.modulemap */,
+				2A37C7192FD28BAFB5EF73A9C0CE5FFD /* ChromaColorPicker.xcconfig */,
+				797DB26E139F28D7EA2CCB51CE1858B0 /* ChromaColorPicker-dummy.m */,
+				9BAFD8601C1E1018D06FC223763854CE /* ChromaColorPicker-Info.plist */,
+				A1C997E821C65CF48F7A2323D58C7C34 /* ChromaColorPicker-prefix.pch */,
+				BAF399CEBE75C17FAAE5FCAEF3827B79 /* ChromaColorPicker-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ChromaColorPicker";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		9F4359A991391B37EE3EC8BDF9F7FFA5 /* Headers */ = {
+		DCAFAB88425DA208D9ADA72964D4DE94 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0CB897AEA9E2E87230BF191358998BC /* Pods-Bluprint-umbrella.h in Headers */,
+				026C52E94076F814AD2A18F911588CC5 /* ChromaColorPicker-umbrella.h in Headers */,
+				363E5BECAA20AF25F8DE72EDC56FB767 /* ChromaColorPicker.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3DE00FC16C04CF9718A6F1D0486AD29 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				215DB813F10B44AF95AF099DBAAA1D43 /* Pods-Bluprint-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,25 +295,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		050AE33626CFC7689FE9A4EC0F3924C6 /* Pods-Bluprint */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D4295E66FF25384B6174C4A53CCE2B4E /* Build configuration list for PBXNativeTarget "Pods-Bluprint" */;
-			buildPhases = (
-				9F4359A991391B37EE3EC8BDF9F7FFA5 /* Headers */,
-				0B7D392B8D1D0BA37FF4175C69D8ED76 /* Sources */,
-				313340F7CFBA9C6A17023EF26455D8F1 /* Frameworks */,
-				11AC4F29589C84765378C39823679ED3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DE0C1B36315BAAE23009672B49E7BC63 /* PBXTargetDependency */,
-			);
-			name = "Pods-Bluprint";
-			productName = "Pods-Bluprint";
-			productReference = 43A904080CB92E8D01FED7F58138D765 /* Pods_Bluprint.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		6CDC6F0CAFAE1779F0B239ED6E2B769B /* Disk */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57358B8801E359E63BDF6FE8C33A1C35 /* Build configuration list for PBXNativeTarget "Disk" */;
@@ -249,7 +310,45 @@
 			);
 			name = Disk;
 			productName = Disk;
-			productReference = 21EE8207642C2A436D560F40E45A9E88 /* Disk.framework */;
+			productReference = 1F10B5A66D139DF895D3FB5131414135 /* Disk.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7FD090550A8C1AD7E2036CBA26A32C0B /* Pods-Bluprint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28240DFAE402705B3C553CCE9554E5D3 /* Build configuration list for PBXNativeTarget "Pods-Bluprint" */;
+			buildPhases = (
+				E3DE00FC16C04CF9718A6F1D0486AD29 /* Headers */,
+				9717149E9EAB1AE91066C7B24BDF3127 /* Sources */,
+				A90ED9DF82217A294B5838405604668C /* Frameworks */,
+				AE52F64E9D6B854B21B882AEA4C7702D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				51F96B053A9D8BCBBF0B006D5165251F /* PBXTargetDependency */,
+				CC161C019ED50BD6CA55AD99BFD7ECE0 /* PBXTargetDependency */,
+			);
+			name = "Pods-Bluprint";
+			productName = "Pods-Bluprint";
+			productReference = 5815E63783B677C2005F0335BCB04C3F /* Pods_Bluprint.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FEAFBB12C7096AEFCA1AA8FA96E57D73 /* ChromaColorPicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E75CD54B557568019C87A63DF0A4D3A /* Build configuration list for PBXNativeTarget "ChromaColorPicker" */;
+			buildPhases = (
+				DCAFAB88425DA208D9ADA72964D4DE94 /* Headers */,
+				6B53353D6A8EC7FBD3B436B183491B7F /* Sources */,
+				A6D9D0FC09DCC33DD2C7DC0AFB284DAD /* Frameworks */,
+				B8B84C52E733F44B9532B2977FE1AAAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChromaColorPicker;
+			productName = ChromaColorPicker;
+			productReference = AA12CC58DCBA7BB201E19744B5011CEA /* ChromaColorPicker.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -269,25 +368,33 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 92C923848D352B50BEE4D8C02277CCE1 /* Products */;
+			productRefGroup = 984C38321E665CA96E33374BF5300D9A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				FEAFBB12C7096AEFCA1AA8FA96E57D73 /* ChromaColorPicker */,
 				6CDC6F0CAFAE1779F0B239ED6E2B769B /* Disk */,
-				050AE33626CFC7689FE9A4EC0F3924C6 /* Pods-Bluprint */,
+				7FD090550A8C1AD7E2036CBA26A32C0B /* Pods-Bluprint */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		11AC4F29589C84765378C39823679ED3 /* Resources */ = {
+		A40014CA2207B309BA5F52AEEC75A616 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A40014CA2207B309BA5F52AEEC75A616 /* Resources */ = {
+		AE52F64E9D6B854B21B882AEA4C7702D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8B84C52E733F44B9532B2977FE1AAAB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -297,14 +404,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0B7D392B8D1D0BA37FF4175C69D8ED76 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2525E9F5E2BE16D008345DEBE8B7F4E9 /* Pods-Bluprint-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		36C14BB6B9C439E097009A6538A74C62 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -323,21 +422,126 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6B53353D6A8EC7FBD3B436B183491B7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A04545A74ADF966AF179551AFA489D9B /* ChromaAddButton.swift in Sources */,
+				B4F7769657403DBFF38EAAD7F6837D21 /* ChromaColorPicker-dummy.m in Sources */,
+				4FBA139F2C3B722D5BA65F1FC7632229 /* ChromaColorPicker.swift in Sources */,
+				340CBE4A416D39CAC507DBBD5928BAF0 /* ChromaHandle.swift in Sources */,
+				B1B8FB6C7C917BF802F494CB577F4687 /* ChromaShadeSlider.swift in Sources */,
+				94735EB1BFBE473841978C26C1B45529 /* ColorModeToggleButton.swift in Sources */,
+				0D206B88E406422F3E9A1FB13FEBAF41 /* UIColor+Utilities.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9717149E9EAB1AE91066C7B24BDF3127 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67B00399194FED42614A03902084DD3E /* Pods-Bluprint-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DE0C1B36315BAAE23009672B49E7BC63 /* PBXTargetDependency */ = {
+		51F96B053A9D8BCBBF0B006D5165251F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ChromaColorPicker;
+			target = FEAFBB12C7096AEFCA1AA8FA96E57D73 /* ChromaColorPicker */;
+			targetProxy = CC47C8FCCE382D66AE15B026AB3830C6 /* PBXContainerItemProxy */;
+		};
+		CC161C019ED50BD6CA55AD99BFD7ECE0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Disk;
 			target = 6CDC6F0CAFAE1779F0B239ED6E2B769B /* Disk */;
-			targetProxy = 3D9302CDA7D8F56C7B78AC3379BB6D32 /* PBXContainerItemProxy */;
+			targetProxy = AA65615D7E68D209FAB69149422E1DB0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1C46C5D7AE957C2CDA640D4583EA33A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A37C7192FD28BAFB5EF73A9C0CE5FFD /* ChromaColorPicker.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ChromaColorPicker/ChromaColorPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ChromaColorPicker/ChromaColorPicker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ChromaColorPicker/ChromaColorPicker.modulemap";
+				PRODUCT_MODULE_NAME = ChromaColorPicker;
+				PRODUCT_NAME = ChromaColorPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		22A84D636C9D685913DC28555421625C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDE2FD73D08DEDB1C97F74F3799E201F /* Pods-Bluprint.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Bluprint/Pods-Bluprint-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Bluprint/Pods-Bluprint.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		30CC6C5813D80E77F463E61CB4B6A918 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 109DA7CFAD9E985838F24AB5211082EA /* Disk.xcconfig */;
+			baseConfigurationReference = 7E105F0FBBDFB186612E53560BC991EC /* Disk.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
@@ -371,6 +575,42 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		46B65E3EBB1997BF3D665AAE75906248 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A37C7192FD28BAFB5EF73A9C0CE5FFD /* ChromaColorPicker.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ChromaColorPicker/ChromaColorPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ChromaColorPicker/ChromaColorPicker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ChromaColorPicker/ChromaColorPicker.modulemap";
+				PRODUCT_MODULE_NAME = ChromaColorPicker;
+				PRODUCT_NAME = ChromaColorPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		53F99F6B1862E780A72A99B751670C43 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -436,45 +676,6 @@
 			};
 			name = Debug;
 		};
-		6E6B2A77FCA5B79A8E63270B9AABBB25 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 741F8961A0E79BCE72D16B562D67FA49 /* Pods-Bluprint.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Bluprint/Pods-Bluprint-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Bluprint/Pods-Bluprint.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		80207B3A22B9372718B5DE4B8557FA98 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -535,9 +736,9 @@
 			};
 			name = Release;
 		};
-		D6AD3F0972F500902CBD5055FA14B521 /* Release */ = {
+		C3678D961C3330BACD9AB8E063B5F68D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DDE2FD73D08DEDB1C97F74F3799E201F /* Pods-Bluprint.release.xcconfig */;
+			baseConfigurationReference = 741F8961A0E79BCE72D16B562D67FA49 /* Pods-Bluprint.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -569,15 +770,14 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		F81FD20D8B3C65B2C77BF14278525A0D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 109DA7CFAD9E985838F24AB5211082EA /* Disk.xcconfig */;
+			baseConfigurationReference = 7E105F0FBBDFB186612E53560BC991EC /* Disk.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
@@ -614,6 +814,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		28240DFAE402705B3C553CCE9554E5D3 /* Build configuration list for PBXNativeTarget "Pods-Bluprint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3678D961C3330BACD9AB8E063B5F68D /* Debug */,
+				22A84D636C9D685913DC28555421625C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -632,11 +841,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D4295E66FF25384B6174C4A53CCE2B4E /* Build configuration list for PBXNativeTarget "Pods-Bluprint" */ = {
+		8E75CD54B557568019C87A63DF0A4D3A /* Build configuration list for PBXNativeTarget "ChromaColorPicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6E6B2A77FCA5B79A8E63270B9AABBB25 /* Debug */,
-				D6AD3F0972F500902CBD5055FA14B521 /* Release */,
+				46B65E3EBB1997BF3D665AAE75906248 /* Debug */,
+				1C46C5D7AE957C2CDA640D4583EA33A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

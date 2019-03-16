@@ -14,6 +14,9 @@ struct Layer {
     var name: String = ""
     var history: [UIImage] = []
     var visible: Bool = true
+    var color: UIColor = UIColor.black
+    var brush: Brushes = Brushes.pen
+    var brushThickness: Int = -1
     
     init(id: Int) {
         self.id = id

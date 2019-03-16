@@ -1,16 +1,20 @@
 PODS:
+  - ChromaColorPicker (1.7.2)
   - Disk (0.4.0)
 
 DEPENDENCIES:
+  - ChromaColorPicker
   - Disk (~> 0.4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - ChromaColorPicker
     - Disk
 
 SPEC CHECKSUMS:
+  ChromaColorPicker: 78194fbae9f342d3781ac178c4d92c7652197d18
   Disk: ef2956657d5bb56034b38b29b352170165226440
 
-PODFILE CHECKSUM: 146b987e27bfa75edb8b13a681ff06ece4e52b55
+PODFILE CHECKSUM: add05627dc57deb1525a388fed3e5f6b2583c52a
 
 COCOAPODS: 1.6.0.beta.2

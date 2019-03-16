@@ -16,7 +16,7 @@ class CanvasView: UIImageView {
     // Parameters
     private let defaultLineWidth:CGFloat = 6
     private let forceSensitivity: CGFloat = 4.0
-    private var drawColor: UIColor = UIColor.red
+    private var drawColor: UIColor = UIColor.black
     private var chunks: [UIImage] = []
     
     func setup(delegate: HistoryManager){
@@ -27,11 +27,9 @@ class CanvasView: UIImageView {
         if let image = image{
             self.historyManager?.appendAction(newImage: image)
         }
-        print("Ended")
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("Touch")
         guard let touch = touches.first else { return }
         UIGraphicsBeginImageContextWithOptions(bounds.size, false, 0.0)
         let context = UIGraphicsGetCurrentContext()
@@ -49,7 +47,6 @@ class CanvasView: UIImageView {
     }
     
     private func drawStroke(context: CGContext?, touch: UITouch) {
-        print("Drawing")
         let previousLocation = touch.previousLocation(in: self)
         let location = touch.location(in: self)
         
@@ -69,16 +66,18 @@ class CanvasView: UIImageView {
         context!.addLine(to: location)
         // Draw the stroke
         context!.strokePath()
-        
     }
     
     private func lineWidthForDrawing(context: CGContext?, touch: UITouch) -> CGFloat {
-        print("Line width")
         var lineWidth = defaultLineWidth
         if touch.force > 0 {
             lineWidth = touch.force * forceSensitivity
         }
         return lineWidth
+    }
+    
+    func setDrawColor(color: UIColor) {
+        drawColor = color
     }
     
     

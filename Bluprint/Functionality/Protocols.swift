@@ -20,9 +20,15 @@ protocol LayerManager: class {
 }
 
 protocol ToolbarManager: class {
+    func changedName(newName: String)
     func undo()
     func redo()
     func brush(button: UIButton)
     func color(button: UIButton)
     func deleteLayer()
+}
+
+protocol BrushAndColorManager: class {
+    func colorChanged(color: UIColor)
+    func brushChanged(brush: Brushes)
 }
