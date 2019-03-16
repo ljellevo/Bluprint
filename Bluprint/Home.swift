@@ -23,22 +23,23 @@ class Home: UIViewController {
     @IBOutlet weak var toolbarContainer: UIView!
     
     var history: [UIImage] = []
-    var layers: [Layer] = []
+    //var layers: [Layer] = []
+    var document: Document = Document()
     var activeLayerIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        layers.append(Layer(id: 1))
+        document.layers.append(Layer(id: 1))
         canvasView.setup(delegate: self as HistoryManager)
-        layersComponent.setup(layers: layers, delegate: self as LayerManager)
+        layersComponent.setup(layers: document.layers, delegate: self as LayerManager)
         canvasView.clearCanvas(animated:false)
         initToolbar()
-        setToolbar(layer: layers[0])
+        setToolbar(layer: document.layers[0])
     }
     
     @IBAction func newLayer(_ sender: UIButton) {
         newLayer()
-        changeLayer(index: layers.count - 1)
+        changeLayer(index: document.layers.count - 1)
     }
     
     @IBAction func clearCanvas(_ sender: UIButton) {
@@ -46,11 +47,11 @@ class Home: UIViewController {
     }
     
     func drawCanvas(index: Int) {
-        canvasView.image = layers[index].history.last
+        canvasView.image = document.layers[index].history.last
         
         backgroundCanvas.layer.sublayers = []
         for i in 0..<index {
-            if let image = layers[i].history.last?.cgImage, layers[i].visible {
+            if let image = document.layers[i].history.last?.cgImage, document.layers[i].visible {
                 let layer = CALayer()
                 layer.frame = backgroundCanvas.bounds
                 layer.contents = image
@@ -64,42 +65,42 @@ class Home: UIViewController {
 extension Delegates: HistoryManager, LayerManager, ToolbarManager {
 
     func newLayer() {
-        layers.append(Layer(id: (layers[layers.count - 1]).id + 1))
-        layersComponent.layers = layers.reversed()
+        document.layers.append(Layer(id: (document.layers[document.layers.count - 1]).id + 1))
+        layersComponent.layers = document.layers.reversed()
         layersComponent.reloadData()
     }
     
     func changeLayer(index: Int) {
         activeLayerIndex = index
-        canvasView.setDrawColor(color: layers[activeLayerIndex].color)
-        layersComponent.activeLayerIndex = layers.count - activeLayerIndex - 1
+        canvasView.setDrawColor(color: document.layers[activeLayerIndex].color)
+        layersComponent.activeLayerIndex = document.layers.count - activeLayerIndex - 1
         layersComponent.reloadData()
         drawCanvas(index: index)
-        setToolbar(layer: layers[activeLayerIndex])
+        setToolbar(layer: document.layers[activeLayerIndex])
     }
     
     func hideLayer(index: Int) {
-        if layers[index].visible {
-            layers[index].visible = false
+        if document.layers[index].visible {
+            document.layers[index].visible = false
         } else {
-            layers[index].visible = true
+            document.layers[index].visible = true
         }
-        layersComponent.layers = layers.reversed()
+        layersComponent.layers = document.layers.reversed()
         layersComponent.reloadData()
         drawCanvas(index: activeLayerIndex)
     }
     
     func changedName(newName: String){
-        layers[activeLayerIndex].name = newName
-        layersComponent.layers = layers.reversed()
+        document.layers[activeLayerIndex].name = newName
+        layersComponent.layers = document.layers.reversed()
         layersComponent.reloadData()
         
     }
     
     func undo() {
-        if layers[activeLayerIndex].history.count > 0 {
+        if document.layers[activeLayerIndex].history.count > 0 {
             canvasView.clearCanvas(animated:false)
-            layers[activeLayerIndex].history.removeLast()
+            document.layers[activeLayerIndex].history.removeLast()
             drawCanvas(index: activeLayerIndex)
         }
     }
@@ -118,22 +119,22 @@ extension Delegates: HistoryManager, LayerManager, ToolbarManager {
     
     func deleteLayer() {
         let oldLayerIndex = activeLayerIndex
-        if layers.count > 1 {
-            layers.remove(at: oldLayerIndex)
+        if document.layers.count > 1 {
+            document.layers.remove(at: oldLayerIndex)
             if activeLayerIndex == 0 {
                 changeLayer(index: 0)
             } else {
                 changeLayer(index: activeLayerIndex - 1)
             }
         }
-        layersComponent.layers = layers.reversed()
+        layersComponent.layers = document.layers.reversed()
         layersComponent.reloadData()
     }
     
     
     // History Manager
     func appendAction(newImage: UIImage) {
-        layers[activeLayerIndex].history.append(newImage)
+        document.layers[activeLayerIndex].history.append(newImage)
     }
 }
 
@@ -156,7 +157,7 @@ extension Toolbar {
             toolbar.name.text = ""
         }
         
-        if layers.count > 1 {
+        if document.layers.count > 1 {
             toolbar.deleteButton.isEnabled = true
         } else {
             toolbar.deleteButton.isEnabled = false
@@ -183,14 +184,19 @@ extension Components: UIPopoverPresentationControllerDelegate, BrushAndColorMana
             popoverController?.sourceRect = CGRect(x: 45, y: 45, width: 0, height: 0)
             popoverController?.permittedArrowDirections = [.down, .up]
             popover.preferredContentSize = CGSize(width: 250, height: 350)
-            popover.load(delegate: self as BrushAndColorManager, color: layers[activeLayerIndex].color)
+            popover.load(delegate: self as BrushAndColorManager, document: document,  layer: document.layers[activeLayerIndex])
             present(popover, animated: true)
         }
     }
     
     func colorChanged(color: UIColor) {
-        layers[activeLayerIndex].color = color
+        document.layers[activeLayerIndex].color = color
+        document.recentColors.insert(color, at: 0)
         canvasView.setDrawColor(color: color)
+    }
+    
+    func documentColorAdded(color: UIColor) {
+        document.documentColors.insert(color, at: 0)
     }
     
     func brushChanged(brush: Brushes) {

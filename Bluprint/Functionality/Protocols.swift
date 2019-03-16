@@ -30,5 +30,10 @@ protocol ToolbarManager: class {
 
 protocol BrushAndColorManager: class {
     func colorChanged(color: UIColor)
+    func documentColorAdded(color: UIColor)
     func brushChanged(brush: Brushes)
+}
+
+protocol ColorCellManager: class {
+    func colorWasPicked(color: UIColor)
 }

@@ -25,14 +25,17 @@ extension UIImage {
     }
 }
 
-//class UIShortTapGestureRecognizer: UITapGestureRecognizer {
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent) {
-//        super.touchesBegan(touches, with: event)
-//
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 4.3) { [weak self] in
-//            if self?.state != .recognized {
-//                self?.state = .failed
-//            }
-//        }
-//    }
-//}
+extension Array where Element == UIColor {
+    
+    mutating func put(color: UIColor){
+        var list = self as [UIColor]
+        if list.count > 0{
+            if self[0] != color {
+                list.insert(color, at: 0)
+            }
+        } else {
+            list.append(color)
+        }
+        self = list
+    }
+}
