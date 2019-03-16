@@ -16,5 +16,10 @@ enum PopoverAction {
 enum Brushes {
     case pencil
     case pen
-    
+}
+
+enum CellState {
+    case focus
+    case active
+    case hidden
 }

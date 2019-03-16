@@ -72,6 +72,8 @@ extension Delegates: HistoryManager, LayerManager, ToolbarManager {
     func changeLayer(index: Int) {
         activeLayerIndex = index
         canvasView.setDrawColor(color: layers[activeLayerIndex].color)
+        layersComponent.activeLayerIndex = layers.count - activeLayerIndex - 1
+        layersComponent.reloadData()
         drawCanvas(index: index)
         setToolbar(layer: layers[activeLayerIndex])
     }
@@ -82,6 +84,8 @@ extension Delegates: HistoryManager, LayerManager, ToolbarManager {
         } else {
             layers[index].visible = true
         }
+        layersComponent.layers = layers.reversed()
+        layersComponent.reloadData()
         drawCanvas(index: activeLayerIndex)
     }
     

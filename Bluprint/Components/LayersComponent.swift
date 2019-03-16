@@ -13,6 +13,7 @@ private typealias GestureManager = LayersComponent
 class LayersComponent: UICollectionView, UICollectionViewDataSource, UICollectionViewDelegate {
     weak var layerManager: LayerManager?
     var layers: [Layer] = []
+    var activeLayerIndex: Int = 0
     
     
     
@@ -22,6 +23,7 @@ class LayersComponent: UICollectionView, UICollectionViewDataSource, UICollectio
         self.delegate = self
         self.dataSource = self
         self.register(UINib.init(nibName: "LayerCell", bundle: nil), forCellWithReuseIdentifier: "LayerCell")
+        self.reloadData()
         addGestureRecognizers()
     }
     
@@ -38,6 +40,19 @@ class LayersComponent: UICollectionView, UICollectionViewDataSource, UICollectio
         } else {
             cell.layerLabel.text = layers[indexPath.row].id.description
         }
+        
+        if !layers[indexPath.row].visible {
+            cell.state(CellState.hidden)
+        } else {
+           cell.state(CellState.active)
+        }
+        
+        if indexPath.row == activeLayerIndex {
+           cell.state(CellState.focus)
+        }
+        
+        
+        
         return cell
     }
     
@@ -66,19 +81,17 @@ extension GestureManager {
             let _: UICollectionViewCell = self.cellForItem(at: indexPath as IndexPath)!
             layerManager?.changeLayer(index: layers.count - indexPath.row - 1)
         }
-        
     }
     
     @objc func didDoubleTapCollectionView(_ gesture: UIShortTapGestureRecognizer) {
         let pointInCollectionView: CGPoint = gesture.location(in: self)
         if let indexPath: IndexPath = self.indexPathForItem(at: pointInCollectionView){
             let _: UICollectionViewCell = self.cellForItem(at: indexPath as IndexPath)!
-            layerManager?.hideLayer(index: layers.count - 1 - indexPath.row)
+            if indexPath.row != activeLayerIndex {
+                layerManager?.hideLayer(index: layers.count - 1 - indexPath.row)
+            }
         }
-        
     }
-    
-    
 }
 
 
