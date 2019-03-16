@@ -23,8 +23,8 @@ class Home: UIViewController {
     @IBOutlet weak var toolbarContainer: UIView!
     
     var history: [UIImage] = []
-    //var layers: [Layer] = []
     var document: Document = Document()
+    var brushes: [Brushes] = [Brushes.pen, Brushes.pencil]
     var activeLayerIndex = 0
     
     override func viewDidLoad() {
@@ -165,18 +165,20 @@ extension Toolbar {
     }
 }
 
-extension Components: UIPopoverPresentationControllerDelegate, BrushAndColorManager {
-    
+extension Components: UIPopoverPresentationControllerDelegate, ColorManager, BrushManager {
+
     func popoverModal(source: UIButton, content: PopoverAction) {
         switch content {
         case PopoverAction.brush:
+            /*
             let ac = UIAlertController(title: "Hello!", message: "This is the brush popover.", preferredStyle: .actionSheet)
             let popover = ac.popoverPresentationController
             popover?.sourceView = source
             popover?.sourceRect = CGRect(x: 15, y: -15, width: 64, height: 64)
             present(ac, animated: true)
-        case PopoverAction.color:
-            let popover = Bundle.main.loadNibNamed("PopoverComponent", owner: self, options: nil)!.first as! PopoverComponent
+ */
+            
+            let popover = Bundle.main.loadNibNamed("BrushPopover", owner: self, options: nil)!.first as! BrushPopover
             popover.modalPresentationStyle = .popover
             let popoverController = popover.popoverPresentationController
             popoverController?.delegate = self
@@ -184,7 +186,18 @@ extension Components: UIPopoverPresentationControllerDelegate, BrushAndColorMana
             popoverController?.sourceRect = CGRect(x: 45, y: 45, width: 0, height: 0)
             popoverController?.permittedArrowDirections = [.down, .up]
             popover.preferredContentSize = CGSize(width: 250, height: 350)
-            popover.load(delegate: self as BrushAndColorManager, document: document,  layer: document.layers[activeLayerIndex])
+            popover.load(delegate: self as BrushManager, brush: document.brush, brushes: brushes)
+            present(popover, animated: true)
+        case PopoverAction.color:
+            let popover = Bundle.main.loadNibNamed("ColorPopover", owner: self, options: nil)!.first as! ColorPopover
+            popover.modalPresentationStyle = .popover
+            let popoverController = popover.popoverPresentationController
+            popoverController?.delegate = self
+            popoverController?.sourceView = source
+            popoverController?.sourceRect = CGRect(x: 45, y: 45, width: 0, height: 0)
+            popoverController?.permittedArrowDirections = [.down, .up]
+            popover.preferredContentSize = CGSize(width: 250, height: 350)
+            popover.load(delegate: self as ColorManager, document: document,  layer: document.layers[activeLayerIndex])
             present(popover, animated: true)
         }
     }
@@ -199,8 +212,8 @@ extension Components: UIPopoverPresentationControllerDelegate, BrushAndColorMana
         document.documentColors.insert(color, at: 0)
     }
     
-    func brushChanged(brush: Brushes) {
-        print("Home: Brush Changed")
+    func brushChanged(to: Int) {
+        print("Brush chnaged to")
     }
 }
 

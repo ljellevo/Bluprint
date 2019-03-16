@@ -9,21 +9,21 @@
 import UIKit
 import ChromaColorPicker
 
-private typealias ColorDelegate = PopoverComponent
-private typealias Gesture = PopoverComponent
+private typealias ColorDelegate = ColorPopover
+private typealias Gesture = ColorPopover
 
 
-class PopoverComponent: UIViewController, ChromaColorPickerDelegate {
+class ColorPopover: UIViewController, ChromaColorPickerDelegate {
     
     var recentColors: [UIColor] = []
     var documentColors: [UIColor] = []
-    weak var brushAndColorManager: BrushAndColorManager?
+    weak var brushAndColorManager: ColorManager?
     var longPressDone = false
     
     @IBOutlet weak var colorView: UIView!
     @IBOutlet weak var recentColorsView: UIView!
-    @IBOutlet weak var recentColorsComponent: ColorHistoryComponent!
-    @IBOutlet weak var documentColorsComponent: ColorHistoryComponent!
+    @IBOutlet weak var recentColorsComponent: ColorComponent!
+    @IBOutlet weak var documentColorsComponent: ColorComponent!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,10 +32,7 @@ class PopoverComponent: UIViewController, ChromaColorPickerDelegate {
     }
     
 
-    func load(delegate: BrushAndColorManager, document: Document, layer: Layer){
-
-        
-        
+    func load(delegate: ColorManager, document: Document, layer: Layer) {
         brushAndColorManager = delegate
         let colorPicker = ChromaColorPicker(frame: CGRect(x: 0, y: 0, width: 250, height: 250))
         colorPicker.delegate = self
@@ -76,7 +73,7 @@ class PopoverComponent: UIViewController, ChromaColorPickerDelegate {
         updateColor(in: documentColorsComponent, colors: documentColors)
     }
     
-    func updateColor(in view: ColorHistoryComponent, colors: [UIColor]){
+    func updateColor(in view: ColorComponent, colors: [UIColor]){
         view.colors = colors
         view.reloadData()
     }
@@ -95,7 +92,7 @@ extension ColorDelegate: ColorCellManager {
 }
 
 extension Gesture: UIGestureRecognizerDelegate {
-    func addLongPressGesture(for view: ColorHistoryComponent){
+    func addLongPressGesture(for view: ColorComponent) {
         let gesture : UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_ :)))
         gesture.minimumPressDuration = 1.0
         gesture.delegate = self
@@ -104,7 +101,7 @@ extension Gesture: UIGestureRecognizerDelegate {
     }
     
     
-    @objc func handleLongPress(_ gestureRecognizer : UILongPressGestureRecognizer){
+    @objc func handleLongPress(_ gestureRecognizer : UILongPressGestureRecognizer) {
         
         if gestureRecognizer.state == UIGestureRecognizer.State.began{
             longPressDone = false
@@ -113,7 +110,7 @@ extension Gesture: UIGestureRecognizerDelegate {
 
         if !longPressDone {
             let pointInCollectionView: CGPoint = gestureRecognizer.location(in: documentColorsComponent)
-            if let indexPath: IndexPath = documentColorsComponent.indexPathForItem(at: pointInCollectionView){
+            if let indexPath: IndexPath = documentColorsComponent.indexPathForItem(at: pointInCollectionView) {
                 documentColors.remove(at: indexPath.row)
                 updateColor(in: documentColorsComponent, colors: documentColors)
                 longPressDone = true

@@ -28,10 +28,13 @@ protocol ToolbarManager: class {
     func deleteLayer()
 }
 
-protocol BrushAndColorManager: class {
+protocol ColorManager: class {
     func colorChanged(color: UIColor)
     func documentColorAdded(color: UIColor)
-    func brushChanged(brush: Brushes)
+}
+
+protocol BrushManager: class {
+    func brushChanged(to: Int)
 }
 
 protocol ColorCellManager: class {

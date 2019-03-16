@@ -13,5 +13,5 @@ struct Document {
     var layers: [Layer] = []
     var recentColors: [UIColor] = []
     var documentColors: [UIColor] = []
-    
+    var brush: Brush = Brush(type: Brushes.pen, thickness: -1)
 }

@@ -15,14 +15,20 @@
 		B406BC0222357DAF00FB2E97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B406BC0022357DAF00FB2E97 /* LaunchScreen.storyboard */; };
 		B42BEC98223D28CA00570550 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42BEC96223D28CA00570550 /* ColorCell.swift */; };
 		B42BEC99223D28CA00570550 /* ColorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B42BEC97223D28CA00570550 /* ColorCell.xib */; };
-		B42BEC9B223D292C00570550 /* ColorHistoryComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42BEC9A223D292C00570550 /* ColorHistoryComponent.swift */; };
+		B42BEC9B223D292C00570550 /* ColorComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42BEC9A223D292C00570550 /* ColorComponent.swift */; };
 		B42BEC9D223D2AD500570550 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42BEC9C223D2AD500570550 /* Document.swift */; };
+		B42BECA0223D65E000570550 /* BrushPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42BEC9E223D65E000570550 /* BrushPopover.swift */; };
+		B42BECA1223D65E000570550 /* BrushPopover.xib in Resources */ = {isa = PBXBuildFile; fileRef = B42BEC9F223D65E000570550 /* BrushPopover.xib */; };
+		B42BECA4223D670C00570550 /* BrushCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42BECA2223D670C00570550 /* BrushCell.swift */; };
+		B42BECA5223D670C00570550 /* BrushCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B42BECA3223D670C00570550 /* BrushCell.xib */; };
+		B42BECA7223D683B00570550 /* BrushComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42BECA6223D683B00570550 /* BrushComponent.swift */; };
+		B42BECA9223D6A6000570550 /* Brush.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42BECA8223D6A6000570550 /* Brush.swift */; };
 		B46B5CBB223593D50045F909 /* LayersComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46B5CBA223593D50045F909 /* LayersComponent.swift */; };
 		B46B5CBE223594A30045F909 /* LayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46B5CBC223594A30045F909 /* LayerCell.swift */; };
 		B46B5CBF223594A30045F909 /* LayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B46B5CBD223594A30045F909 /* LayerCell.xib */; };
 		B483E48C2235CBA4002C2DC8 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B483E48B2235CBA4002C2DC8 /* Extentions.swift */; };
-		B494882A223AF1F6003C98CA /* PopoverComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4948828223AF1F6003C98CA /* PopoverComponent.swift */; };
-		B494882B223AF1F6003C98CA /* PopoverComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4948829223AF1F6003C98CA /* PopoverComponent.xib */; };
+		B494882A223AF1F6003C98CA /* ColorPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4948828223AF1F6003C98CA /* ColorPopover.swift */; };
+		B494882B223AF1F6003C98CA /* ColorPopover.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4948829223AF1F6003C98CA /* ColorPopover.xib */; };
 		B49AA40C2236EB2100E66572 /* ToolbarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49AA40B2236EB2100E66572 /* ToolbarComponent.swift */; };
 		B49AA40E2236ECBD00E66572 /* ToolbarComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = B49AA40D2236ECBD00E66572 /* ToolbarComponent.xib */; };
 		B4A1BC11223580B3005F30C1 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A1BC10223580B3005F30C1 /* CanvasView.swift */; };
@@ -45,14 +51,20 @@
 		B406BC0322357DAF00FB2E97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B42BEC96223D28CA00570550 /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
 		B42BEC97223D28CA00570550 /* ColorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorCell.xib; sourceTree = "<group>"; };
-		B42BEC9A223D292C00570550 /* ColorHistoryComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHistoryComponent.swift; sourceTree = "<group>"; };
+		B42BEC9A223D292C00570550 /* ColorComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorComponent.swift; sourceTree = "<group>"; };
 		B42BEC9C223D2AD500570550 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		B42BEC9E223D65E000570550 /* BrushPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrushPopover.swift; sourceTree = "<group>"; };
+		B42BEC9F223D65E000570550 /* BrushPopover.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrushPopover.xib; sourceTree = "<group>"; };
+		B42BECA2223D670C00570550 /* BrushCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrushCell.swift; sourceTree = "<group>"; };
+		B42BECA3223D670C00570550 /* BrushCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrushCell.xib; sourceTree = "<group>"; };
+		B42BECA6223D683B00570550 /* BrushComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrushComponent.swift; sourceTree = "<group>"; };
+		B42BECA8223D6A6000570550 /* Brush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brush.swift; sourceTree = "<group>"; };
 		B46B5CBA223593D50045F909 /* LayersComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayersComponent.swift; sourceTree = "<group>"; };
 		B46B5CBC223594A30045F909 /* LayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerCell.swift; sourceTree = "<group>"; };
 		B46B5CBD223594A30045F909 /* LayerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LayerCell.xib; sourceTree = "<group>"; };
 		B483E48B2235CBA4002C2DC8 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
-		B4948828223AF1F6003C98CA /* PopoverComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverComponent.swift; sourceTree = "<group>"; };
-		B4948829223AF1F6003C98CA /* PopoverComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopoverComponent.xib; sourceTree = "<group>"; };
+		B4948828223AF1F6003C98CA /* ColorPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPopover.swift; sourceTree = "<group>"; };
+		B4948829223AF1F6003C98CA /* ColorPopover.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorPopover.xib; sourceTree = "<group>"; };
 		B49AA40B2236EB2100E66572 /* ToolbarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarComponent.swift; sourceTree = "<group>"; };
 		B49AA40D2236ECBD00E66572 /* ToolbarComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToolbarComponent.xib; sourceTree = "<group>"; };
 		B4A1BC10223580B3005F30C1 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
@@ -101,8 +113,10 @@
 				B4EEC63E2235A91D00C6A005 /* Functionality */,
 				B4A1BC10223580B3005F30C1 /* CanvasView.swift */,
 				B406BBF922357DAD00FB2E97 /* Home.swift */,
-				B4948828223AF1F6003C98CA /* PopoverComponent.swift */,
-				B4948829223AF1F6003C98CA /* PopoverComponent.xib */,
+				B4948828223AF1F6003C98CA /* ColorPopover.swift */,
+				B4948829223AF1F6003C98CA /* ColorPopover.xib */,
+				B42BEC9E223D65E000570550 /* BrushPopover.swift */,
+				B42BEC9F223D65E000570550 /* BrushPopover.xib */,
 				B46B5CC1223594CF0045F909 /* Cells */,
 				B483E48A2235B341002C2DC8 /* Components */,
 				B406BBFB22357DAD00FB2E97 /* Main.storyboard */,
@@ -118,6 +132,8 @@
 				B46B5CBD223594A30045F909 /* LayerCell.xib */,
 				B42BEC96223D28CA00570550 /* ColorCell.swift */,
 				B42BEC97223D28CA00570550 /* ColorCell.xib */,
+				B42BECA2223D670C00570550 /* BrushCell.swift */,
+				B42BECA3223D670C00570550 /* BrushCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -128,7 +144,8 @@
 				B46B5CBA223593D50045F909 /* LayersComponent.swift */,
 				B49AA40B2236EB2100E66572 /* ToolbarComponent.swift */,
 				B49AA40D2236ECBD00E66572 /* ToolbarComponent.xib */,
-				B42BEC9A223D292C00570550 /* ColorHistoryComponent.swift */,
+				B42BEC9A223D292C00570550 /* ColorComponent.swift */,
+				B42BECA6223D683B00570550 /* BrushComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -142,6 +159,7 @@
 				B4CC95092239C36900D050CE /* CustomGestureRecognizers.swift */,
 				B4CC950C2239D4A900D050CE /* Enums.swift */,
 				B42BEC9C223D2AD500570550 /* Document.swift */,
+				B42BECA8223D6A6000570550 /* Brush.swift */,
 			);
 			path = Functionality;
 			sourceTree = "<group>";
@@ -223,9 +241,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B42BECA1223D65E000570550 /* BrushPopover.xib in Resources */,
 				B49AA40E2236ECBD00E66572 /* ToolbarComponent.xib in Resources */,
-				B494882B223AF1F6003C98CA /* PopoverComponent.xib in Resources */,
+				B494882B223AF1F6003C98CA /* ColorPopover.xib in Resources */,
 				B406BC0222357DAF00FB2E97 /* LaunchScreen.storyboard in Resources */,
+				B42BECA5223D670C00570550 /* BrushCell.xib in Resources */,
 				B406BBFF22357DAE00FB2E97 /* Assets.xcassets in Resources */,
 				B406BBFD22357DAD00FB2E97 /* Main.storyboard in Resources */,
 				B46B5CBF223594A30045F909 /* LayerCell.xib in Resources */,
@@ -292,15 +312,19 @@
 				B46B5CBE223594A30045F909 /* LayerCell.swift in Sources */,
 				B406BBFA22357DAD00FB2E97 /* Home.swift in Sources */,
 				B406BBF822357DAD00FB2E97 /* AppDelegate.swift in Sources */,
-				B494882A223AF1F6003C98CA /* PopoverComponent.swift in Sources */,
+				B494882A223AF1F6003C98CA /* ColorPopover.swift in Sources */,
 				B4EEC6422235B17100C6A005 /* Layer.swift in Sources */,
 				B49AA40C2236EB2100E66572 /* ToolbarComponent.swift in Sources */,
 				B483E48C2235CBA4002C2DC8 /* Extentions.swift in Sources */,
+				B42BECA4223D670C00570550 /* BrushCell.swift in Sources */,
 				B4EEC6402235A93800C6A005 /* Protocols.swift in Sources */,
-				B42BEC9B223D292C00570550 /* ColorHistoryComponent.swift in Sources */,
+				B42BEC9B223D292C00570550 /* ColorComponent.swift in Sources */,
+				B42BECA9223D6A6000570550 /* Brush.swift in Sources */,
+				B42BECA7223D683B00570550 /* BrushComponent.swift in Sources */,
 				B4A1BC11223580B3005F30C1 /* CanvasView.swift in Sources */,
 				B4CC950A2239C36900D050CE /* CustomGestureRecognizers.swift in Sources */,
 				B46B5CBB223593D50045F909 /* LayersComponent.swift in Sources */,
+				B42BECA0223D65E000570550 /* BrushPopover.swift in Sources */,
 				B42BEC98223D28CA00570550 /* ColorCell.swift in Sources */,
 				B4CC950D2239D4A900D050CE /* Enums.swift in Sources */,
 				B42BEC9D223D2AD500570550 /* Document.swift in Sources */,

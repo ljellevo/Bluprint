@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ColorHistoryComponent: UICollectionView, UICollectionViewDataSource, UICollectionViewDelegate {
+class ColorComponent: UICollectionView, UICollectionViewDataSource, UICollectionViewDelegate {
     var colors: [UIColor] = []
     weak var colorCellManager: ColorCellManager?
     
