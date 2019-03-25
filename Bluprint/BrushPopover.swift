@@ -28,7 +28,12 @@ class BrushPopover: UIViewController {
 }
 
 extension Delegate: BrushManager {
-    func brushChanged(to brush: Int) {
+    
+    func brushChanged(to brush: Brushes) {
         brushManager?.brushChanged(to: brush)
+    }
+    
+    func thicknessChanged(to thickness: Int) {
+        brushManager?.thicknessChanged(to: thickness)
     }
 }

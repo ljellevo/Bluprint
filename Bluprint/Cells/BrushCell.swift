@@ -11,6 +11,7 @@ import UIKit
 class BrushCell: UICollectionViewCell {
 
     @IBOutlet weak var frameView: UIView!
+    @IBOutlet weak var cellText: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

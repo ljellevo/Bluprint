@@ -170,14 +170,6 @@ extension Components: UIPopoverPresentationControllerDelegate, ColorManager, Bru
     func popoverModal(source: UIButton, content: PopoverAction) {
         switch content {
         case PopoverAction.brush:
-            /*
-            let ac = UIAlertController(title: "Hello!", message: "This is the brush popover.", preferredStyle: .actionSheet)
-            let popover = ac.popoverPresentationController
-            popover?.sourceView = source
-            popover?.sourceRect = CGRect(x: 15, y: -15, width: 64, height: 64)
-            present(ac, animated: true)
- */
-            
             let popover = Bundle.main.loadNibNamed("BrushPopover", owner: self, options: nil)!.first as! BrushPopover
             popover.modalPresentationStyle = .popover
             let popoverController = popover.popoverPresentationController
@@ -212,8 +204,15 @@ extension Components: UIPopoverPresentationControllerDelegate, ColorManager, Bru
         document.documentColors.insert(color, at: 0)
     }
     
-    func brushChanged(to: Int) {
-        print("Brush chnaged to")
+    func brushChanged(to brush: Brushes) {
+        let currentBrush = document.brush
+        let currentThickness = currentBrush.thickness
+        document.brush = Brush(type: brush, thickness: currentThickness)
+        print("Brush chnaged to: ", brush)
+    }
+    
+    func thicknessChanged(to thickness: Int) {
+        print("Thickness changed to: ", thickness)
     }
 }
 

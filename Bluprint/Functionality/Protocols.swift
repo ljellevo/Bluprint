@@ -34,7 +34,8 @@ protocol ColorManager: class {
 }
 
 protocol BrushManager: class {
-    func brushChanged(to: Int)
+    func brushChanged(to brush: Brushes)
+    func thicknessChanged(to thickness: Int)
 }
 
 protocol ColorCellManager: class {

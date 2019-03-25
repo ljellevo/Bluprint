@@ -37,7 +37,23 @@ class CanvasView: UIImageView {
         // Draw previous image into context
         image?.draw(in: bounds)
         
-        drawStroke(context: context, touch: touch)
+        //drawStroke(context: context, touch: touch)
+        var touches = [UITouch]()
+        
+        // 2
+        if let coalescedTouches = event?.coalescedTouches(for: touch) {
+            touches = coalescedTouches
+        } else {
+            touches.append(touch)
+        }
+        
+        // 3
+        print(touches.count)
+        
+        // 4
+        for touch in touches {
+            drawStroke(context: context, touch: touch)
+        }
         //self.delegate?.chunkManager(chunk: context!)
         
         

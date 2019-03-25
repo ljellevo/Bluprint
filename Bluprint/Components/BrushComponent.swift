@@ -20,8 +20,6 @@ class BrushComponent: UICollectionView, UICollectionViewDataSource, UICollection
         self.dataSource = self
         self.register(UINib.init(nibName: "BrushCell", bundle: nil), forCellWithReuseIdentifier: "BrushCell")
         self.reloadData()
-        print("Reload")
-        print(brushes.count)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -33,11 +31,27 @@ class BrushComponent: UICollectionView, UICollectionViewDataSource, UICollection
         cell.frameView.layer.cornerRadius = cell.frame.width/2
         cell.frameView.layer.borderWidth = 1
         cell.frameView.layer.borderColor = UIColor.lightGray.cgColor
+        switch indexPath.row {
+        case 0:
+            cell.cellText.text = "Pen"
+        case 1:
+            cell.cellText.text = "Pencil"
+        default:
+            break
+        }
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        brushManager?.brushChanged(to: indexPath.row)
+        switch indexPath.row {
+        case 0:
+            brushManager?.brushChanged(to: Brushes.pen)
+        case 1:
+            brushManager?.brushChanged(to: Brushes.pencil)
+        default:
+            break
+        }
     }
 
 }
